@@ -463,6 +463,43 @@ footer span{
     font-style: italic;
     color: #c46900;
 }
+
+/* ================================================================================================================================================================
+  Contacts
+
+   */
+#map-canvas {
+    width: 100%;
+    height: 560px;
+}
+.contactInfo{
+   width: 29%;
+    background-color: rgba(255,156,0,0.6);
+    position: absolute;
+    z-index: 2;
+    padding: 10px;
+    margin-top: 50px;
+    font-size: 0.84em;
+    overflow: hidden;
+}
+.contactInfo h1, .contactInfo h2{
+    color: white;
+    margin-bottom: 0;
+}
+.contactInfo span, .contactInfo address{
+    color:rgba(35,68,101,1);
+}
+.contactInfo p{
+    color: rgb(20, 124, 24);
+    margin-bottom: 0;
+}
+.contactInfo a:hover{
+    text-decoration: underline;
+}
+#contactSection{
+    margin: 0 !important;
+}
+
 /* ================================================================================================================================================================
   Responsive
 

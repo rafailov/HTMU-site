@@ -1,53 +1,52 @@
 $(document).ready(function(){
-  
-   $("#start").click(function(){       
-       $("#start").attr('class','active');       
-       $("#forus").attr('class','unActive');
-       $("#newsbutton").attr('class','unActive');
-       $("#forStudents").attr('class','unActive');
-       $("#contacts").attr('class','unActive');
-       $("#faq").attr('class','unActive');
-   });
-   $("#forus").click(function(){
-       $("#start").attr('class','unActive');
-       $("#forus").attr('class','active');
-       $("#newsbutton").attr('class','unActive');
-       $("#forStudents").attr('class','unActive');
-       $("#contacts").attr('class','unActive');
-       $("#faq").attr('class','unActive');
-   });
-   $("#newsbutton").click(function(){
-       $("#start").attr('class','unActive');
-       $("#forus").attr('class','unActive');
-       $("#newsbutton").attr('class','active');
-       $("#forStudents").attr('class','unActive');
-       $("#contacts").attr('class','unActive');
-       $("#faq").attr('class','unActive');
-   });
-   $("#forStudents").click(function(){
-       $("#start").attr('class','unActive');
-       $("#forus").attr('class','unActive');       
-       $("#newsbutton").attr('class','unActive');       
-       $("#forStudents").attr('class','active');       
-       $("#contacts").attr('class','unActive');       
-       $("#faq").attr('class','unActive');
-   });
-   $("#contacts").click(function(){       
-       $("#start").attr('class','unActive');
-       $("#forus").attr('class','unActive');
-       $("#newsbutton").attr('class','unActive');
-       $("#forStudents").attr('class','unActive');
-       $("#contacts").attr('class','active');
-       $("#faq").attr('class','unActive');
-   });
-   $("#faq").click(function(){
-       $("#start").attr('class','unActive');
-       $("#forus").attr('class','unActive');
-       $("#newsbutton").attr('class','unActive');
-       $("#forStudents").attr('class','unActive');
-       $("#contacts").attr('class','unActive');
-       $("#faq").attr('class','active');
-   });
+        $("#start").click(function(){
+            $("#start").attr('class','active');
+            $("#forus").attr('class','unActive');
+            $("#newsbutton").attr('class','unActive');
+            $("#forStudents").attr('class','unActive');
+            $("#contacts").attr('class','unActive');
+            $("#faq").attr('class','unActive');
+        });
+        $("#forus").click(function(){
+            $("#start").attr('class','unActive');
+            $("#forus").attr('class','active');
+            $("#newsbutton").attr('class','unActive');
+            $("#forStudents").attr('class','unActive');
+            $("#contacts").attr('class','unActive');
+            $("#faq").attr('class','unActive');
+        });
+        $("#newsbutton").click(function(){
+            $("#start").attr('class','unActive');
+            $("#forus").attr('class','unActive');
+            $("#newsbutton").attr('class','active');
+            $("#forStudents").attr('class','unActive');
+            $("#contacts").attr('class','unActive');
+            $("#faq").attr('class','unActive');
+        });
+        $("#forStudents").click(function(){
+            $("#start").attr('class','unActive');
+            $("#forus").attr('class','unActive');
+            $("#newsbutton").attr('class','unActive');
+            $("#forStudents").attr('class','active');
+            $("#contacts").attr('class','unActive');
+            $("#faq").attr('class','unActive');
+        });
+        $("#contacts").click(function(){
+            $("#start").attr('class','unActive');
+            $("#forus").attr('class','unActive');
+            $("#newsbutton").attr('class','unActive');
+            $("#forStudents").attr('class','unActive');
+            $("#contacts").attr('class','active');
+            $("#faq").attr('class','unActive');
+        });
+        $("#faq").click(function(){
+            $("#start").attr('class','unActive');
+            $("#forus").attr('class','unActive');
+            $("#newsbutton").attr('class','unActive');
+            $("#forStudents").attr('class','unActive');
+            $("#contacts").attr('class','unActive');
+            $("#faq").attr('class','active');
+        });
 
     $(".forus").click(function(){
         $("#forusInformation").show(500);
@@ -153,7 +152,5 @@ $(document).ready(function(){
 
 });
 /*                */
-
-
 
 /**/
