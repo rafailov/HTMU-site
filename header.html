@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HTMU</title>
+    <title>UCTM</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="img/1902961_754225154596522_835305249_n.png" />
@@ -27,18 +27,23 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-XXXXX-X');ga('send','pageview');
 
-        function setImage(imageName , id){
+        function setImage(imageName , id , dbId){
             var theImage = document.getElementById("bigImage");
             document.getElementById('image').removeChild(theImage);
 
+            var newHref = document.createElement("a");
+            newHref.setAttribute('href',"news.php?id="+dbId);
+            newHref.setAttribute('id',"bigImage");
+
             var newImg=document.createElement("img");
-            newImg.setAttribute('id',"bigImage");
             newImg.setAttribute('src',imageName);
             document.getElementById("first").className = "";
             document.getElementById("second").className = "";
             document.getElementById("third").className = "";
             document.getElementById(id).setAttribute('class','visual');
-            document.getElementById('image').appendChild(newImg);
+            newHref.appendChild(newImg);
+            document.getElementById('image').appendChild(newHref);
+
 
         }
 

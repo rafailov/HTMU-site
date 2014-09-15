@@ -33,7 +33,7 @@ require_once('header.html');
                            { } ];
 
                        var mapOptions = {
-                           zoom: 15,
+                           zoom: 16,
                            center: center,
                            panControl: true,
                            zoomControl: true,

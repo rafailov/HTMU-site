@@ -1,5 +1,6 @@
 <?php
 require_once('header.html');
+require_once('getNews.php');
 ?>
                         <li ><a href="index.php" id="newsbutton" class="active help">Новини</a></li>
                         <li ><a href="For-us.php" id="forus" class="unActive help">За Нас</a></li>
@@ -15,13 +16,28 @@ require_once('header.html');
                     <section>
                         <article>
                             <div id="image">
-                                <img id="bigImage" src="img/DSC09158.JPG"/>
+                                <?php
+                                if(isset($imageNameSpecial) && isset($newsIdSpecial)){
+                                    $size = sizeof($imageNameSpecial);
+                                ?>
+                                <a id="bigImage" href="news.php?id=<?php echo$newsIdSpecial[$size - 1];?>">
+                                <img  src="img/<?php echo $imageNameSpecial[$size-1];?>" alt="aaasdd"/>
+                                </a>
+                                <?php
+                                }
+                                ?>
                             </div>
                             <aside>
                                 <div class="miniImage">
-                                    <a href="javascript:setImage('img/DSC09158.JPG', 'first')" ><img id="first" class="visual" src="img/DSC09158.JPG"/></a>
-                                    <a href="javascript:setImage('img/DSC091582.JPG', 'second')" ><img id="second" src="img/DSC091582.JPG"/></a>
-                                    <a href="javascript:setImage('img/DSC091583.JPG', 'third')" ><img id="third" src="img/DSC091583.JPG"/></a>
+                                    <?php
+                                    if(isset($imageNameSpecial) && isset($size) && isset($newsIdSpecial)){
+                                    ?>
+                                    <a href="javascript:setImage('img/<?php echo $imageNameSpecial[$size-1];?>', 'first', '<?php echo$newsIdSpecial[$size-1];?>')" ><img id="first" class="visual" src="img/<?php echo $imageNameSpecial[$size-1];?>"/></a>
+                                    <a href="javascript:setImage('img/<?php echo $imageNameSpecial[$size-2];?>', 'second', '<?php echo$newsIdSpecial[$size-2];?>')" ><img id="second" src="img/<?php echo $imageNameSpecial[$size-2];?>"/></a>
+                                    <a href="javascript:setImage('img/<?php echo $imageNameSpecial[$size-3];?>', 'third', '<?php echo$newsIdSpecial[$size-3];?>')" ><img id="third" src="img/<?php echo $imageNameSpecial[$size-3];?>"/></a>
+                                    <?php
+                                    }
+                                    ?>
                                 </div>
                             </aside>
                         </article>
@@ -33,20 +49,37 @@ require_once('header.html');
                                 </ul>
                             </nav>
                             <div id="newsImages">
-                                <div class="theNews"><a href="news.php?id=1"><div class="title">Lorem ipsum dolor sit amet elit, sed diam nonummy nibh  tincidunt</div><span>22.08.2014</span><img  src="img/DSC09158.JPG"/></a></div>
-                                <div class="theNews"><a href="news.php?id=12"><div class="title">Lorem ipsum dolor sit amet, sed diam nonummy nibh euismod tincidunt</div><span>22.08.2014</span><img  src="img/DSC091582.JPG"/></a></div>
-                                <div class="theNews"><a href="news.php?id=13"><div class="title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed  nibh euismod tincidunt</div><span>22.08.2014</span><img  src="img/DSC091583.JPG"/></a></div>
-                                <div class="theNews"><a href="news.php?id=14"><div class="title">Lorem  adipiscing elit, sed diam nonummy nibh euismod tincidunt</div><span>22.08.2014</span><img  src="img/DSC091583.JPG"/></a></div>
-                                <div class="theNews"><a href="news.php?id=15"><div class="title">Lorem ipsum dolor sit amet, , sed diam nonummy nibh euismod tincidunt</div><span>22.08.2014</span><img  src="img/DSC091582.JPG"/></a></div>
-                                <div class="theNews"><a href="news.php?id=16"><div class="title">Lorem ipsum sed diam nonummy nibh euismod tincidunt</div><span>22.08.2014</span><img  src="img/DSC09158.JPG"/></a></div>
 
+                                <?php
+                                if(isset($imageNameSimple) && isset($newsIdSimple) && isset($newsDateSimple) && isset($newsTitleSimple)){
+                                    $size = sizeof($imageNameSimple);
+                                    for($ID = $size - 1; $ID >= 0; $ID--){
+                                    ?>
+                                    <div class="theNews">
+                                        <a href="news.php?id=<?php echo$newsIdSimple[$ID];?>">
+                                            <div class="title"><?php echo$newsTitleSimple[$ID];?></div>
+                                            <span><?php echo$newsDateSimple[$ID];?></span>
+                                            <img  src="img/<?php echo$imageNameSimple[$ID];?>"/>
+                                        </a>
+                                    </div>
+                                <?php
+                                    }
+                                }
+                                ?>
                             </div>
                             <aside>
                                 <ul>
-                                    <li><a href="#">Lorem ipsum dolor sit amet,</a></li>
-                                    <li><a href="#">Lorem dolor  in sit amet,</a></li>
-                                    <li><a href="#">Lorem ipsum sit amet,</a></li>
-                                    <li><a href="#">Lorem ipsum dolor amet,</a></li>
+                                    <?php
+                                    if(isset($newsIdSimple) && isset($newsTitleSimple)){
+                                        $size = sizeof($newsIdSimple);
+                                        for($ID = $size - 1; $ID >= 0; $ID--){
+                                        ?>
+                                            <li><a href="news.php?id=<?php echo$newsIdSimple[$ID];?>"><?php echo$newsTitleSimple[$ID];?></a></li>
+                                        <?php
+                                        }
+                                    }
+                                    ?>
+
                                 </ul>
                             </aside>
                         </article>

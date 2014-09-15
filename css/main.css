@@ -144,9 +144,14 @@ header nav ul{
 }
 header nav ul li{
     display:inline;
+    max-width: 149px;
+    overflow: hidden;
+
 }
 header nav ul li a{
     padding: 20px;
+    max-width: 149px;
+    overflow: hidden;
     border-radius:5px;
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
@@ -237,6 +242,10 @@ div.wrapper section article section article nav ul li:hover{
     width: 78%;
     margin: 4px;
 }
+#news nav ul li{
+    max-height: 38px;
+    overflow: hidden;
+}
 #news nav ul >li{
     width: 107px;
     margin-bottom: 5px;
@@ -249,13 +258,11 @@ div.wrapper section article section article nav ul li:hover{
     padding-bottom: 3px;
 }
 #news aside ul li a:hover{
-    text-decoration: underline;
+    color:#C57B06;
 }
-#news aside ul li:hover{
-    color:#FF9C00;
-}
+
 #newsImages{
-    background: rgba(93,93,93,0.7);
+    background: rgba(35,68,101,0.8);
     padding: 10px;
     width: 72%;
     border-top-right-radius: 55px ;
@@ -288,6 +295,8 @@ div.wrapper section article section article nav ul li:hover{
     font-style: italic;
     color: #444;
     display: block;
+    overflow: hidden;
+    max-height: 30px;
 }
 .theNews img{
     height: 230px;
@@ -352,29 +361,39 @@ footer span{
 #fullNews{
     width: 70%;
     float: left;
-    font-family: arial;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
 
 }
 #fullNews img{
     width: 100%;
     display: block;
     max-height: 530px;
+    margin-top: 2%;
+}
+#fullNews span{
+    max-height: 50px;
+    overflow: hidden;
 }
 .bigTitle{
     font-size: 2em;
     color: #e78400;
+    overflow: hidden;
+    max-height: 173px;
 }
 #otherNews{
     background: rgba(35,68,101,0.8);
     width: 25%;
     padding: 10px;
     float: right;
+    overflow: hidden;
 }
 .miniNews{
     margin-bottom: 16px;
     font-size: 80%;
     width: 100%;
     display: inline-block;
+    overflow: hidden;
 }
 .miniNews a{
     color:#FF9C00;
@@ -385,6 +404,8 @@ footer span{
     font-style: italic;
     color: white;
     display: block;
+    max-height: 50px;
+    overflow: hidden;
 }
 .miniNews img{
     height: 140px;
@@ -395,6 +416,7 @@ footer span{
 }
 .minititle{
     max-height: 93px;
+    overflow: hidden;
 
 }
 
