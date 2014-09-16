@@ -15,17 +15,37 @@ $(document).ready(function(){
     $('#removeError').click(function(){
         $('#errorMessage').slideUp('slow');
     });
+
+
+
+
+    $('.addNews input[type="checkbox"]').click(function(){
+        $('#idInforPdf').toggleClass("infoPDF");
+    });
+
+
     $('.imgForRemoveNews').click(function(){
         var id = $(this).attr('id');
         id = id.substr(4);
 
-        $('#newsRow'+id).slideUp(90);
-        /*<?php include '../database/db.php';
-        $db = new DatabaseConnect;
-        $sql = "UPDATE `studsavet`.`news` SET `isDeleted` = '1' WHERE `news`.`id` = `2`;";
-        $db->execute($sql);
-        ?>*/
-        console.log(id);
-    });
+
+        //var keys = $(this).val();
+        $.ajax({
+            url: "../admin/deleteNews.php",
+            type: "POST",
+            dataType: "html",
+            data: {
+                value: id
+            }
+        }).done(function(data) {
+            $("#result").html(data);
+            $('#newsRow'+id).hide(90);
+            //alert("done");
+        }).fail(function() {
+            alert("Новината не беше премахната успешно !");
+        })
+
+    })
+
 
 });

@@ -162,7 +162,12 @@ a{
 .addNews  input[type="submit"]:hover{
     cursor: pointer;
 }
-
+.addNews input[type="checkbox"]{
+    margin-left: 32px;
+}
+.infoPDF{
+    display: none;
+}
 .addAdmin{
     position: fixed;
     left: 36%;

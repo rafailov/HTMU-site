@@ -3,7 +3,7 @@ require_once('header.html');
 if(isset($_GET['id'])){
     $newsId = $_GET['id'];
     require_once('getNews.php');
-    if(isset($newsImageArr)){
+    if(isset($newsImageArr) || $newsIsDeletedArr[0] == '1'){
         $theImage = $newsImageArr[0];
         $theId = $newsIdArr[0];
         $theDate = $newsDateArr[0];

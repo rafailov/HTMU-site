@@ -53,18 +53,27 @@ $title = "Administration";
                 <label for="radioSave">Важна новина</label>
                 <input type="radio" value="special" name="typeNews"/><br/>
                 <label for="radioSpecial">Обикновена новина</label>
-                <input type="radio" value="simple" name="typeNews"/>
+                <input type="radio" value="simple" name="typeNews"/><br/>
+                <label for="isHavePdf">Ще добавяте ли PDF файл</label>
+                <input type="checkbox" value="pdf" name="isHavePdf"/>
+                <div class="infoPDF" id="idInforPdf">
+                    <input type="text" placeholder="Текстът за линка на PDF" />
+                    <input type="file" name="file2" id="file2"/><br/>
+                </div>
                 <input type="submit" value="Добави новината"/>
+
             </form>
         </div>
+        <div id="result">
 
+        </div>
         <div id="allNews">
             <table class="table">
                 <tr><th>Номер</th><th>Заглавие</th><th>Дата</th><th>Новина</th><th>Снимка</th><th>Важност</th><th>Четимост</th><th>Премахване</th></tr>
                 <?php
                 include_once '../database/db.php';
                 $db = new DatabaseConnect;
-                $sql = "SELECT * FROM `news`";
+                $sql = "SELECT * FROM `news` where `isDeleted` = '0'";
                 $result = $db->execute($sql);
                 while ($row = $result->fetch_assoc()) {
                     if(strlen($row["content"])> 50){

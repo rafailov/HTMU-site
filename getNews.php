@@ -12,6 +12,7 @@ if(isset($newsId)){
             $newsTitleArr[] = $row['title'];
             $newsContentArr[] = $row['content'];
             $newsReadableArr[] = $row['readable'];
+            $newsIsDeletedArr[] = $row['isDeleted'];
         }
 
     }
