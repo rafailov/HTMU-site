@@ -57,7 +57,7 @@ $title = "Administration";
                 <label for="isHavePdf">Ще добавяте ли PDF файл</label>
                 <input type="checkbox" value="pdf" name="isHavePdf"/>
                 <div class="infoPDF" id="idInforPdf">
-                    <input type="text" placeholder="Текстът за линка на PDF" />
+                    <input type="text" name="pdfHref" placeholder="Текстът за линка на PDF / Ако липсва текст ще бъде зададен такъв от системата" />
                     <input type="file" name="file2" id="file2"/><br/>
                 </div>
                 <input type="submit" value="Добави новината"/>
@@ -69,24 +69,41 @@ $title = "Administration";
         </div>
         <div id="allNews">
             <table class="table">
-                <tr><th>Номер</th><th>Заглавие</th><th>Дата</th><th>Новина</th><th>Снимка</th><th>Важност</th><th>Четимост</th><th>Премахване</th></tr>
+                <tr><th>№</th><th>Заглавие</th><th>Дата</th><th>Новина</th><th>Снимка</th><th>Важност</th><th>PDF</th><th>Четена</th><th>Изтриване</th></tr>
                 <?php
                 include_once '../database/db.php';
                 $db = new DatabaseConnect;
                 $sql = "SELECT * FROM `news` where `isDeleted` = '0'";
                 $result = $db->execute($sql);
                 while ($row = $result->fetch_assoc()) {
-                    if(strlen($row["content"])> 50){
+                    if(strlen($row["content"])> 24){
                         $content="";
                         $helpString = $row["content"];
-                        for($i=0;$i<50;$i++){
+                        for($i=0;$i<24;$i++){
                             $content.=$helpString[$i];
                         }
                         $content.="...";
                     }else{
                         $content=$row["content"];
                     }
-                    echo '<tr id="newsRow'. $row["id"].'"><td>' . $row["id"] . '</td><td>' . htmlspecialchars($row["title"]) . '</td><td>' . htmlspecialchars($row["date"]) . '</td><td>' . htmlspecialchars($content) . '</td><td style="width: 8%;"><img src="../img/' . $row["picture"] . '"/></td><td>' . $row["isImportant"] . '</td><td>' . $row["readable"] . '</td><td class="imgRemove"><img class="imgForRemoveNews" id="news'.$row["id"].'" src="../img/removeNews.png"/></td></tr>';
+
+                    if(strlen($row["title"])> 15){
+                        $titleMini="";
+                        $helpString = $row["title"];
+                        for($i=0;$i<15;$i++){
+                            $titleMini.=$helpString[$i];
+                        }
+                        $titleMini.="...";
+                    }else{
+                        $titleMini=$row["title"];
+                    }
+                    $isHavePdf = $row['isHavePdf'];
+                    if($isHavePdf == '1'){
+                        $isHavePdf = "Да";
+                    }else{
+                        $isHavePdf = "Не";
+                    }
+                    echo '<tr id="newsRow'. $row["id"].'"><td>' . $row["id"] . '</td><td>' . htmlspecialchars($titleMini) . '</td><td>' . htmlspecialchars($row["date"]) . '</td><td>' . htmlspecialchars($content) . '</td><td style="width: 8%;"><img src="../img/' . $row["picture"] . '"/></td><td>' . $row["isImportant"] . '</td><td>'.$isHavePdf.'</td><td>' . $row["readable"] . '</td><td class="imgRemove"><img class="imgForRemoveNews" id="news'.$row["id"].'" src="../img/removeNews.png"/></td></tr>';
                 }
                 ?>
             </table>
@@ -102,3 +119,19 @@ $title = "Administration";
     </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+Леман Велиева
+Петя Янева
+
+
+

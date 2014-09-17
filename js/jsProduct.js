@@ -20,7 +20,13 @@ $(document).ready(function(){
 
 
     $('.addNews input[type="checkbox"]').click(function(){
-        $('#idInforPdf').toggleClass("infoPDF");
+        var thisCheck = $(this);
+
+        if(this.checked) {
+            $('#idInforPdf').slideDown(500);
+        }else{
+            $('#idInforPdf').slideUp(500);
+        }
     });
 
 

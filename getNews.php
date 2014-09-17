@@ -13,6 +13,9 @@ if(isset($newsId)){
             $newsContentArr[] = $row['content'];
             $newsReadableArr[] = $row['readable'];
             $newsIsDeletedArr[] = $row['isDeleted'];
+            $newsIsHavePDF[] = $row['isHavePdf'];
+            $newsPdfPath[] = $row['pdfPath'];
+            $newsHrefPdf[]= $row['hrefText'];
         }
 
     }
