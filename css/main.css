@@ -207,7 +207,7 @@ a.unActive:active, header nav ul li:visited, .active{
     margin: 4px;
     margin-top: 0 ;
     float: right;
-    max-height: 140px;
+    max-height: 150px;
 
 }
 .miniImage img:hover{
@@ -320,13 +320,14 @@ div.wrapper section article section article:nth-child(2) aside{
     min-height: 263px;
 
 }
+div.wrapper section article section article:nth-child(2) aside ul li{
+    line-height: 1.9;
+}
 div.wrapper section article section article:nth-child(2) aside ul li a{
     text-decoration: none;
-    color:black;
+    color:rgba(33, 54, 76, 1);
 }
-div.wrapper section article section article:nth-child(2) aside:hover{
-    background: rgba(130,116,124,0.5);
-}
+
 footer{
     width: 80%;
     background: rgba(93,93,93,0.8);
@@ -570,6 +571,9 @@ footer span{
     }
 }
 @media all and (max-width: 1160px){
+    .miniImage img{
+    max-height: 138px;
+    }
     #fullNews{
         width: 100%;
     }
@@ -596,6 +600,9 @@ footer span{
 }
 
 @media all and (max-width: 1050px){
+    .miniImage img{
+    max-height: 128px;
+    }
     header nav ul{
         width: 100%;
         margin: 6px 0 6px 40px;
@@ -633,16 +640,25 @@ footer span{
 
 }
 @media all and (max-width: 950px){
+    .miniImage img{
+    max-height: 114px;
+    }
     #forusSection{
         background-size: 156%;
     }
 }
 @media all and (max-width: 865px){
+    .miniImage img{
+    max-height: 104px;
+    }
     #forusSection{
         background-size: 172%;
     }
 }
 @media all and (max-width: 800px){
+    .miniImage img{
+    max-height: 140px;
+    }
     #newsBox {
         width: 100%;
     }
@@ -663,6 +679,9 @@ footer span{
     }
 }
 @media all and (max-width: 750px){
+    .miniImage img{
+    max-height: 120px;
+    }
     #forusSection{
         background-size: 210%;
     }

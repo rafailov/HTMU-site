@@ -103,7 +103,7 @@ $title = "Administration";
                     }else{
                         $isHavePdf = "Не";
                     }
-                    echo '<tr id="newsRow'. $row["id"].'"><td>' . $row["id"] . '</td><td>' . htmlspecialchars($titleMini) . '</td><td>' . htmlspecialchars($row["date"]) . '</td><td>' . htmlspecialchars($content) . '</td><td style="width: 8%;"><img src="../img/' . $row["picture"] . '"/></td><td>' . $row["isImportant"] . '</td><td>'.$isHavePdf.'</td><td>' . $row["readable"] . '</td><td class="imgRemove"><img class="imgForRemoveNews" id="news'.$row["id"].'" src="../img/removeNews.png"/></td></tr>';
+                    echo '<tr id="newsRow'. $row["id"].'"><td>' . $row["id"] . '</td><td>' . htmlspecialchars($titleMini) . '</td><td>' . htmlspecialchars($row["date"]) . '</td><td>' . htmlspecialchars($content) . '</td><td style="width: 8%;"><a href="../news.php?id='. $row["id"].'"><img src="../img/' . $row["picture"] . '"/></a></td><td>' . $row["isImportant"] . '</td><td>'.$isHavePdf.'</td><td>' . $row["readable"] . '</td><td class="imgRemove"><img class="imgForRemoveNews" id="news'.$row["id"].'" src="../img/removeNews.png"/></td></tr>';
                 }
                 ?>
             </table>
@@ -127,11 +127,6 @@ $title = "Administration";
 
 
 
-
-
-
-Леман Велиева
-Петя Янева
 
 
 

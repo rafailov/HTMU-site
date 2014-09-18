@@ -44,8 +44,8 @@ require_once('getNews.php');
                         <article id="news">
                             <nav>
                                 <ul>
-                                    <li>НАЙ-НОВИ</li>
-                                    <li>НАЙ-ЧЕТЕНИ</li>
+                                    <li><a style="color:white" href="?sort=lastest">НАЙ-НОВИ</a></li>
+                                    <li><a style="color:white" href="?sort=desc">НАЙ-ЧЕТЕНИ</a></li>
                                 </ul>
                             </nav>
                             <div id="newsImages">
@@ -57,7 +57,7 @@ require_once('getNews.php');
                                     ?>
                                     <div class="theNews">
                                         <a href="news.php?id=<?php echo$newsIdSimple[$ID];?>">
-                                            <div class="title"><?php echo$newsTitleSimple[$ID];?></div>
+                                            <div class="title"><h3><?php echo$newsTitleSimple[$ID];?><h3></div>
                                             <span><?php echo$newsDateSimple[$ID];?></span>
                                             <img  src="img/<?php echo$imageNameSimple[$ID];?>"/>
                                         </a>

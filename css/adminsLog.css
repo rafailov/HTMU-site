@@ -7,10 +7,7 @@ body{
 }
 .body{
     width: 40%;
-
     margin: 0 auto;
-    
-
 }
 .wrapper{ 
     margin-top: 25%;
@@ -28,18 +25,30 @@ body{
     color: white;
 }
 .log{
-
     width: 50%;
     margin: 10% auto 0 auto;
 }
-input[type="text"], .log input[type="password"], {
-
+.log input[type="submit"] {
+    width: 83%;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+.log input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: white;
+    color: darkcyan;
+}
+.log input{
+    width: 80%;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    padding: 5px 0;
 }
 
 .imgLogo{
     width: 29%;
     float: left;
-    margin: 0 5% 6% 0;
+    margin: 0 1% 6% 0;
 }
 .imgLogo img{
     width: 100%;

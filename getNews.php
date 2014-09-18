@@ -24,8 +24,17 @@ if(isset($newsId)){
     $sql = "UPDATE `news` SET `readable` = '".$readable."' WHERE `news`.`id` = ".$newsId;
     $db->execute($sql);
 }
+if(isset($_GET) && isset($_GET['sort'])){
 
-$sql = "SELECT * FROM `news`";
+    if ($_GET['sort'] == 'desc') {
+       $sql="SELECT * FROM  `news` where 'isDeleted'=0 ORDER BY  `news`.`readable` ASC";
+    }else{
+        $sql = "SELECT * FROM `news`";
+    }
+}else{
+    $sql = "SELECT * FROM `news`";
+}
+
 $result = $db->execute($sql);
 while($row=$result->fetch_assoc()){
     if($row['isImportant'] == '1' && $row['isDeleted'] == 0){
