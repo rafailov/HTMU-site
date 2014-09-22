@@ -3,7 +3,7 @@ require_once('header.html');
 ?>
                 <li ><a href="index.php" id="newsbutton" class="unActive help">Новини</a></li>
                 <li ><a href="For-us.php" id="forus" class="active help">За Нас</a></li>
-                <li ><a href="#" id="forStudents" class="unActive help">За Студентите</a></li>
+                <li ><a href="students.php" id="forStudents" class="unActive help">За Студентите</a></li>
                 <li><a href="contacts.php" id="contacts" class="unActive help">Контакти</a></li>
                 <li><a href="#" id="faq" class="unActive help">FAQ</a></li>
             </ul>
