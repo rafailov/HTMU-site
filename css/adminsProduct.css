@@ -78,7 +78,7 @@ a{
     border-bottom-right-radius: 10px;
 }
 .menu nav ul{
-    width: 75%;
+    width: 90%;
     margin:0 auto;
     list-style: none;
 
@@ -169,7 +169,7 @@ a{
 .infoPDF{
     display: none;
 }
-.addAdmin{
+.addAdmin, .groupeAndDocs{
     position: fixed;
     left: 36%;
     display: none;
@@ -178,6 +178,29 @@ a{
 }
 .addAdmin input[type="submit"]{
     margin-top: 10px ;
+}
+.groupeAndDocs{
+    width: 45%;
+}
+.groupeAndDocs select{
+    width: 90%;
+    margin: 5px 30px;
+    border-radius: 5px;
+    padding: 2% 0 2% 0;
+}
+.addGroupe, .addDoc{
+    display: block;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    font-size: 92%;
+    width: 100%;
+    border: 1px midnightblue solid;
+    border-radius: 15px;
+    padding: 1% 0;
+    float: left;
+    min-height: 300px;
+}
+.addDoc{
 }
 
 #allNews{
@@ -234,6 +257,16 @@ a{
     padding:4px 20px 4px 20px;
 }
 */
+@media all and (max-width: 1470px){
+    .menu nav ul{
+        width: 100%;
+    }
+}
+@media all and (max-width: 1319px){
+    .menu nav{
+    width: 100%;
+    }
+}
 @media all and (max-width: 1313px){
     .addAdmin{
         left: 37%;
@@ -241,14 +274,12 @@ a{
     #allNews{
         left: 37%;
     }
-    .menu nav ul{
-        width: 100%;
-    }
+
 }
 @media all and (max-width: 1265px){
     #allNews{
-        left: 40%;
-        width: 55%;
+        left: 38%;
+        width: 57%;
     }
     .addAdmin{
         left: 40%;
@@ -258,15 +289,28 @@ a{
     .addAdmin{
         left: 45%;
     }
-    #allNews{
+    /*#allNews{
         left: 45%;
         width: 50%;
-    }
+    }*/
 }
 @media all and (max-width: 1170px){
     .addAdmin{
         left: 45%;
     }
+    .menu nav a{
+        padding: 10px 52px;
+    }
+
+}
+@media all and (max-width: 1170px){
+
+}
+@media all and (max-width: 1060px){
+    .menu nav a{
+        padding: 10px 42px;
+    }
+
 }
 @media all and (max-width: 1040px){
     .addNews{
@@ -290,34 +334,22 @@ a{
         left: 0;
     }
     .menu nav a{
-        padding: 10px 52px;
+        padding: 10px 36px;
     }
+
 }
-@media all and (max-width: 950px){
-    .menu nav{
-        width: 100%;
-    }
-    .menu nav a{
-        padding: 10px 42px;
-    }
-}
+
 @media all and (max-width: 950px){
     .menu nav ul{
-        width: 100%;
         text-align: center;
         padding: 0;
     }
     .menu nav{
-        width: 100%;
-        height: 200px;
+        height: 250px;
         padding: 0;
 
     }
-    .menu nav a{
-        padding: 10px 42px;
 
-
-    }
     .menu nav ul li{
         display: block;
         width: 100%;

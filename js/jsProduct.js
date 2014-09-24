@@ -1,14 +1,22 @@
 
 $(document).ready(function(){
     $('#newsLink').click(function(){
-        $('.addAdmin').hide(90);
-        $('#allNews').show("slow");
+        $('.addAdmin').slideUp(100);
+        $('.groupeAndDocs').slideUp(100);
+        $('#allNews').slideDown("fast");
                 
     });
     $('#addAdminLink').click(function(){
-        $('#allNews').hide(90);
-        $('.addAdmin').show("slow");
+        $('#allNews').slideUp(100);
+        $('.groupeAndDocs').slideUp(100);
+        $('.addAdmin').slideDown("fast");
     });
+    $('#addGroupPDF').click(function(){
+        $('#allNews').slideUp(100);
+        $('.addAdmin').slideUp(100);
+        $('.groupeAndDocs').slideDown("fast");
+    });
+
     $('#removeMessage').click(function(){
         $('#message').slideUp('slow');
     });
@@ -35,7 +43,6 @@ $(document).ready(function(){
         id = id.substr(4);
 
 
-        //var keys = $(this).val();
         $.ajax({
             url: "../admin/deleteNews.php",
             type: "POST",

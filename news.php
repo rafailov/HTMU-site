@@ -22,7 +22,7 @@ if(isset($_GET['id'])){
 ?>
     <li ><a href="index.php" id="newsbutton" class="active">Новини</a></li>
     <li ><a href="For-us.php" id="forus" class="unActive">За Нас</a></li>
-    <li ><a href="#" id="forStudents" class="unActive">За Студентите</a></li>
+    <li ><a href="stdents.php" id="forStudents" class="unActive">За Студентите</a></li>
     <li><a href="contacts.php" id="contacts" class="unActive">Контакти</a></li>
     <li><a href="#" id="faq" class="unActive">FAQ</a></li>
     </ul>

@@ -1,39 +1,12 @@
 $(document).ready(function(){
-        $("#forus").click(function(){
-            $("#forus").attr('class','active');
-            $("#newsbutton").attr('class','unActive');
-            $("#forStudents").attr('class','unActive');
-            $("#contacts").attr('class','unActive');
-            $("#faq").attr('class','unActive');
-        });
-        $("#newsbutton").click(function(){
-            $("#forus").attr('class','unActive');
-            $("#newsbutton").attr('class','active');
-            $("#forStudents").attr('class','unActive');
-            $("#contacts").attr('class','unActive');
-            $("#faq").attr('class','unActive');
-        });
-        $("#forStudents").click(function(){
-            $("#forus").attr('class','unActive');
-            $("#newsbutton").attr('class','unActive');
-            $("#forStudents").attr('class','active');
-            $("#contacts").attr('class','unActive');
-            $("#faq").attr('class','unActive');
-        });
-        $("#contacts").click(function(){
-            $("#forus").attr('class','unActive');
-            $("#newsbutton").attr('class','unActive');
-            $("#forStudents").attr('class','unActive');
-            $("#contacts").attr('class','active');
-            $("#faq").attr('class','unActive');
-        });
-        $("#faq").click(function(){
-            $("#forus").attr('class','unActive');
-            $("#newsbutton").attr('class','unActive');
-            $("#forStudents").attr('class','unActive');
-            $("#contacts").attr('class','unActive');
-            $("#faq").attr('class','active');
-        });
+
+    $("#faq").click(function(){
+        $("#forus").attr('class','unActive');
+        $("#newsbutton").attr('class','unActive');
+        $("#forStudents").attr('class','unActive');
+        $("#contacts").attr('class','unActive');
+        $("#faq").attr('class','active');
+    });
 
     $(".forus").click(function(){
         $("#forusInformation").show(500);
@@ -44,12 +17,8 @@ $(document).ready(function(){
         $("#structure").hide(500);
 
 
-        $(".forus").addClass( "colored" );
-        $(".staff").removeClass( "colored" );
-        $(".committees").removeClass( "colored" );
-        $(".homesBoard").removeClass( "colored" );
-        $(".projects").removeClass( "colored" );
-        $(".structure").removeClass( "colored" );
+        $("#menu a").removeClass( "colored" );
+        $(this).addClass( "colored" );
     });
     $(".structure").click(function(){
         $("#forusInformation").hide(500);
@@ -60,12 +29,8 @@ $(document).ready(function(){
         $("#structure").show(500);
 
 
-        $(".forus").removeClass( "colored" );
-        $(".staff").removeClass( "colored" );
-        $(".committees").removeClass( "colored" );
-        $(".homesBoard").removeClass( "colored" );
-        $(".projects").removeClass( "colored" );
-        $(".structure").addClass( "colored" );
+        $("#menu a").removeClass( "colored" );
+        $(this).addClass( "colored" );
     });
     $(".staff").click(function(){
         $("#forusInformation").hide(500);
@@ -76,13 +41,8 @@ $(document).ready(function(){
         $("#staff").show(500);
 
 
-
-        $(".forus").removeClass( "colored" );
-        $(".staff").addClass( "colored" );
-        $(".committees").removeClass( "colored" );
-        $(".homesBoard").removeClass( "colored" );
-        $(".projects").removeClass( "colored" );
-        $(".structure").removeClass( "colored" );
+        $("#menu a").removeClass( "colored" );
+        $(this).addClass( "colored" );
     });
     $(".committees").click(function(){
         $("#forusInformation").hide(500);
@@ -93,13 +53,8 @@ $(document).ready(function(){
         $("#committees").show(500);
 
 
-
-        $(".forus").removeClass( "colored" );
-        $(".staff").removeClass( "colored" );
-        $(".committees").addClass( "colored" );
-        $(".homesBoard").removeClass( "colored" );
-        $(".projects").removeClass( "colored" );
-        $(".structure").removeClass( "colored" );
+        $("#menu a").removeClass( "colored" );
+        $(this).addClass( "colored" );
     });
     $(".homesBoard").click(function(){
         $("#forusInformation").hide(500);
@@ -111,12 +66,8 @@ $(document).ready(function(){
 
 
 
-        $(".forus").removeClass( "colored" );
-        $(".staff").removeClass( "colored" );
-        $(".committees").removeClass( "colored" );
-        $(".homesBoard").addClass( "colored" );
-        $(".projects").removeClass( "colored" );
-        $(".structure").removeClass( "colored" );
+        $("#menu a").removeClass( "colored" );
+        $(this).addClass( "colored" );
     });
     $(".projects").click(function(){
         $("#forusInformation").hide(500);
@@ -127,17 +78,64 @@ $(document).ready(function(){
         $("#projects").show(500);
 
 
+        $("#menu a").removeClass( "colored" );
+        $(this).addClass( "colored" );
 
-        $(".forus").removeClass( "colored" );
-        $(".staff").removeClass( "colored" );
-        $(".committees").removeClass( "colored" );
-        $(".homesBoard").removeClass( "colored" );
-        $(".projects").addClass( "colored" );
-        $(".structure").removeClass( "colored" );
+    });
+
+    $("#studentDocMenu p").click(function(){
+        $("#studentDocMenu p").removeClass( "colored" );
+        $(this).addClass( "colored" );
+    });
+
+    $(".norm").click(function(){
+        $("#normAct").show(200);
+        $("#planove").hide(500);
+        $("#stipendii").hide(500);
+        $("#obsht").hide(500);
+        $("#ects").hide(500);
+        $("#diplomni").hide(500);
+    });
+    $(".uchPlan").click(function(){
+        $("#normAct").hide(500);
+        $("#planove").show(200);
+        $("#stipendii").hide(500);
+        $("#obsht").hide(500);
+        $("#ects").hide(500);
+        $("#diplomni").hide(500);
+    });
+    $(".stipen").click(function(){
+        $("#normAct").hide(500);
+        $("#planove").hide(500);
+        $("#stipendii").show(200);
+        $("#obsht").hide(500);
+        $("#ects").hide(500);
+        $("#diplomni").hide(500);
+    });
+    $(".obshtak").click(function(){
+        $("#normAct").hide(500);
+        $("#planove").hide(500);
+        $("#stipendii").hide(500);
+        $("#obsht").show(200);
+        $("#ects").hide(500);
+        $("#diplomni").hide(500);
+    });
+    $(".ects").click(function(){
+        $("#normAct").hide(500);
+        $("#planove").hide(500);
+        $("#stipendii").hide(500);
+        $("#obsht").hide(500);
+        $("#ects").show(200);
+        $("#diplomni").hide(500);
+    });
+    $(".diplomna").click(function(){
+        $("#normAct").hide(500);
+        $("#planove").hide(500);
+        $("#stipendii").hide(500);
+        $("#obsht").hide(500);
+        $("#ects").hide(500);
+        $("#diplomni").show(200);
     });
 
 
 });
-/*                */
-
-/**/
