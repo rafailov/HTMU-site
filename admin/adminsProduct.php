@@ -1,8 +1,9 @@
 <?php
+session_start();
 $title = "Administration";
-//include_once('addNews.php');
-
-//include_once '../database/db.php';
+if(!isset($_SESSION['user'])){
+    header('Location: login.php');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,7 +21,6 @@ $title = "Administration";
         <nav><ul>
                 <li id="newsLink"><a href="javascript:void(0)" id="newsLink" title="Новини">Новини</a></li>
                 <li id="addAdminLink"><a href="javascript:void(0)" id="addAdminLink" title="Добави Администратор">Добави Администратор</a></li>
-                <li id="addGroupPDF"><a href="javascript:void(0)" title="Добави група документи или Документи към дадена група">Групи и Документи</a></li>
                 <li><a href="../index.php" title="Към сайта">Към сайта</a></li>
                 <li><a href="login.php" title="Изход">Изход</a></li>
             </ul></nav>
@@ -117,31 +117,7 @@ $title = "Administration";
                 <input type="submit" value="Регистрирай"/>
             </form>
         </div>
-        <div class="groupeAndDocs " style="display: none">
-            <div class="addGroupe">
-               <select>
 
-                   <option>qwer</option>
-                   <option>qwer2</option>
-                   <option>qwer3</option>
-               </select>
-            </div>
-            <div class="addDoc">
-                <select>
-
-                    <option>qwer</option>
-                    <option>qwer2</option>
-                    <option>qwer3</option>
-                </select>
-                <select>
-
-                    <option>qwer</option>
-                    <option>qwer2</option>
-                    <option>qwer3</option>
-                </select>
-            </div>
-
-        </div>
     </div>
 </body>
 </html>

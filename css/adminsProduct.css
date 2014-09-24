@@ -78,7 +78,7 @@ a{
     border-bottom-right-radius: 10px;
 }
 .menu nav ul{
-    width: 90%;
+    width: 80%;
     margin:0 auto;
     list-style: none;
 
@@ -179,29 +179,6 @@ a{
 .addAdmin input[type="submit"]{
     margin-top: 10px ;
 }
-.groupeAndDocs{
-    width: 45%;
-}
-.groupeAndDocs select{
-    width: 90%;
-    margin: 5px 30px;
-    border-radius: 5px;
-    padding: 2% 0 2% 0;
-}
-.addGroupe, .addDoc{
-    display: block;
-    margin-left: 1%;
-    margin-bottom: 2%;
-    font-size: 92%;
-    width: 100%;
-    border: 1px midnightblue solid;
-    border-radius: 15px;
-    padding: 1% 0;
-    float: left;
-    min-height: 300px;
-}
-.addDoc{
-}
 
 #allNews{
     position: relative;
@@ -258,13 +235,14 @@ a{
 }
 */
 @media all and (max-width: 1470px){
-    .menu nav ul{
-        width: 100%;
-    }
+
 }
 @media all and (max-width: 1319px){
     .menu nav{
     width: 100%;
+    }
+    .menu nav ul{
+        width: 100%;
     }
 }
 @media all and (max-width: 1313px){
@@ -299,7 +277,7 @@ a{
         left: 45%;
     }
     .menu nav a{
-        padding: 10px 52px;
+        padding: 10px 58px;
     }
 
 }
@@ -308,7 +286,7 @@ a{
 }
 @media all and (max-width: 1060px){
     .menu nav a{
-        padding: 10px 42px;
+        padding: 10px 48px;
     }
 
 }
@@ -334,7 +312,7 @@ a{
         left: 0;
     }
     .menu nav a{
-        padding: 10px 36px;
+        padding: 10px 40px;
     }
 
 }
@@ -345,7 +323,7 @@ a{
         padding: 0;
     }
     .menu nav{
-        height: 250px;
+        height: 200px;
         padding: 0;
 
     }

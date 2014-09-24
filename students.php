@@ -101,6 +101,7 @@
                         <p>5. Придобитите кредити се вписват в главните книги.</p>
                     </div>
                     <div id="diplomni">
+                        <h2>ДИПЛОМНА РАБОТА</h2>
                         <p><a href="/studsavet/../uctm-uploads/Metodichni_ukazania.pdf"><strong>Методични указания за изработване и защита на Дипломна работа</strong></a></p>
                     </div>
 
