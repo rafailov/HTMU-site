@@ -15,10 +15,6 @@ $(document).ready(function(){
         $("#homesBoard").hide(500);
         $("#projects").hide(500);
         $("#structure").hide(500);
-
-
-        $("#menu a").removeClass( "colored" );
-        $(this).addClass( "colored" );
     });
     $(".structure").click(function(){
         $("#forusInformation").hide(500);
@@ -27,10 +23,6 @@ $(document).ready(function(){
         $("#homesBoard").hide(500);
         $("#projects").hide(500);
         $("#structure").show(500);
-
-
-        $("#menu a").removeClass( "colored" );
-        $(this).addClass( "colored" );
     });
     $(".staff").click(function(){
         $("#forusInformation").hide(500);
@@ -39,10 +31,6 @@ $(document).ready(function(){
         $("#homesBoard").hide(500);
         $("#projects").hide(500);
         $("#staff").show(500);
-
-
-        $("#menu a").removeClass( "colored" );
-        $(this).addClass( "colored" );
     });
     $(".committees").click(function(){
         $("#forusInformation").hide(500);
@@ -51,10 +39,6 @@ $(document).ready(function(){
         $("#homesBoard").hide(500);
         $("#projects").hide(500);
         $("#committees").show(500);
-
-
-        $("#menu a").removeClass( "colored" );
-        $(this).addClass( "colored" );
     });
     $(".homesBoard").click(function(){
         $("#forusInformation").hide(500);
@@ -63,11 +47,6 @@ $(document).ready(function(){
         $("#committees").hide(500);
         $("#projects").hide(500);
         $("#homesBoard").show(500);
-
-
-
-        $("#menu a").removeClass( "colored" );
-        $(this).addClass( "colored" );
     });
     $(".projects").click(function(){
         $("#forusInformation").hide(500);
@@ -76,12 +55,13 @@ $(document).ready(function(){
         $("#committees").hide(500);
         $("#homesBoard").hide(500);
         $("#projects").show(500);
-
-
-        $("#menu a").removeClass( "colored" );
-        $(this).addClass( "colored" );
-
     });
+    $("#menu a").click(function(){
+        $("#menu a").removeClass("colored");
+        $(this).addClass("colored");
+    });
+
+
 
     $("#studentDocMenu p").click(function(){
         $("#studentDocMenu p").removeClass( "colored" );
@@ -136,6 +116,78 @@ $(document).ready(function(){
         $("#ects").hide(500);
         $("#diplomni").show(200);
     });
+
+
+
+    $("#fxt").click(function(){
+        $("#fxsiDiv").slideUp(200);
+        $("#fmmDiv").slideUp(200);
+        $("#fxtDiv").slideDown(500);
+    });
+
+    $("#fxsi").click(function(){
+        $("#fxtDiv").slideUp(200);
+        $("#fmmDiv").slideUp(200);
+        $("#fxsiDiv").slideDown(500);
+    });
+
+    $("#fmm").click(function(){
+        $("#fxtDiv").slideUp(200);
+        $("#fxsiDiv").slideUp(200);
+        $("#fmmDiv").slideDown(500);
+    });
+    $("#staff h3").click(function(){
+        $("#staff h3").removeClass( "greenColor" );
+        $(this).addClass( "greenColor" );
+    });
+
+
+
+    $("#committees ul li").click(function(){
+        $("#committees ul li").removeClass( "greenColor" );
+        $(this).addClass( "greenColor" );
+    });
+
+
+
+
+
+    $("#kud").click(function(){
+        $("#ksbvuDiv").slideUp(200);
+        $("#kmdDiv").slideUp(200);
+        $("#kboDiv").slideUp(200);
+        $("#ksDiv").slideUp(200);
+        $("#kudDiv").slideDown(500);
+    });
+    $("#ksbvu").click(function(){
+        $("#kmdDiv").slideUp(200);
+        $("#kboDiv").slideUp(200);
+        $("#ksDiv").slideUp(200);
+        $("#kudDiv").slideUp(200);
+        $("#ksbvuDiv").slideDown(500);
+    });
+    $("#kmd").click(function(){
+        $("#ksbvuDiv").slideUp(200);
+        $("#kboDiv").slideUp(200);
+        $("#ksDiv").slideUp(200);
+        $("#kudDiv").slideUp(200);
+        $("#kmdDiv").slideDown(500);
+    });
+    $("#kbo").click(function(){
+        $("#ksbvuDiv").slideUp(200);
+        $("#kmdDiv").slideUp(200);
+        $("#ksDiv").slideUp(200);
+        $("#kudDiv").slideUp(200);
+        $("#kboDiv").slideDown(500);
+    });
+    $("#ks").click(function(){
+        $("#ksbvuDiv").slideUp(200);
+        $("#kmdDiv").slideUp(200);
+        $("#kboDiv").slideUp(200);
+        $("#kudDiv").slideUp(200);
+        $("#ksDiv").slideDown(500);
+    });
+
 
 
 });

@@ -13,6 +13,15 @@
     font-family: hurtm;
     src: url(HURTM___.otf);
 }
+@font-face {
+    font-family: Philosopher-Bold;
+    src: url(Philosopher/Philosopher-Regular.ttf);
+}
+@font-face {
+    font-family: Philosopher-Regular;
+    src: url(Philosopher/Philosopher-Bold.ttf);
+}
+
 
 html,
 button,
@@ -450,7 +459,8 @@ footer span{
 #forusSection{
     background: url(../img/HTMU-background.jpg) no-repeat;
     background-size: 100%;
-    padding-bottom: 25%;
+    min-height: 700px;
+    font-family: Philosopher-Regular;
 }
 #forusInformation{
     padding-left: 2%;
@@ -460,7 +470,7 @@ footer span{
     width: 70%;
     float: left;
     font-weight: bold;
-    background-color: rgba(216, 216, 216, 0.60);
+    background-color: rgba(216, 216, 216, 0.73);
     padding: 10px;
     overflow: hidden;
 }
@@ -489,6 +499,44 @@ footer span{
 }
 .colored {
     color: #c46900 !important;
+}
+.nameP span{
+    color:black;
+}
+.emailP a{
+    color: rgba(35,68,101,1);
+}
+.emailP span{
+    color: black;
+}
+#staff hr{
+   border-top:  1px solid #8f8f8f;
+}
+#staff li h3, #committees ul li{
+    text-decoration: underline;
+}
+#staff li h3:hover , #committees ul li:hover{
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.53);
+}
+#fxtDiv, #fmmDiv, #fxsiDiv{
+    display: none;
+}
+.greenColor{
+    color: #6C8929;
+}
+#committees ul, #staff ul{
+    background: rgba(255, 255, 255, 0.52);
+    padding: 2% 2% 2% 40px;
+    margin-right: 12px;
+}
+#kudDiv, #ksbvuDiv, #kmdDiv, #kboDiv, #ksDiv{
+    display: none;
+}
+.bold{
+    font-family: Philosopher-Bold;
+    font-size: 1.2em;
+    color: #c46900;
 }
 /* ================================================================================================================================================================
   homesBoard
