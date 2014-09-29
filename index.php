@@ -69,12 +69,16 @@ require_once('getNews.php');
                             </div>
                             <aside>
                                 <ul>
+                                    <li id="listTitle"><h3>Новини с прикачени документи</h3></li>
                                     <?php
-                                    if(isset($newsIdSimple) && isset($newsTitleSimple)){
-                                        $size = sizeof($newsIdSimple);
+                                    if(isset($newsIdInfo) && isset($newsIsHavePDFInfo) && isset($newsTitleInfo)){
+                                        $size = sizeof($newsIdInfo);
                                         for($ID = $size - 1; $ID >= 0; $ID--){
+                                            
                                         ?>
-                                            <li><a href="news.php?id=<?php echo$newsIdSimple[$ID];?>"><?php echo$newsTitleSimple[$ID];?></a></li>
+                                        <hr>
+                                            <li><a href="news.php?id=<?php echo$newsIdInfo[$ID];?>"><?php echo$newsTitleInfo[$ID];?></a></li>
+
                                         <?php
                                         }
                                     }
@@ -89,15 +93,15 @@ require_once('getNews.php');
                                 </div>
 
                                 <div class="advertising">
-                                    <a href="http://mmu2.uctm.edu/erasmus/index.html"><img src="img/erasmus_logos.jpg" widht="155" height="150" alt/></a>
+                                    <a href="http://mmu2.uctm.edu/erasmus/index.html"><img src="img/erasmus_logos.png" widht="155" height="150" alt/></a>
                                 </div>
 
                                 <div class="advertising">
-                                    <a href="http://www.mon.bg"><img src="img/logo-mon.jpg" widht="155" height="150" alt/></a>
+                                    <a href="http://www.mon.bg"><img src="img/logo-mon.png" widht="155" height="150" alt/></a>
                                 </div>
 
                                 <div class="advertising">
-                                    <a href="http://www.esn.org"><img src="img/logo-erasmus.jpg" widht="155" height="150" alt/></a>
+                                    <a href="http://www.esn.org"><img src="img/logo-erasmus.png" widht="155" height="150" alt/></a>
                                 </div>
 
                                 <div class="advertising">

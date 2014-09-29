@@ -47,6 +47,12 @@ while($row=$result->fetch_assoc()){
         $newsIdSimple[] = $row['id'];
         $newsDateSimple[] = $row['date'];
         $newsTitleSimple[] = $row['title'];
-    }
 
+    }
+    if($row['isHavePdf'] == 1 && $row['isDeleted'] == 0)
+    {
+        $newsIsHavePDFInfo[] = $row['isHavePdf'];
+         $newsIdInfo[] = $row['id'];
+        $newsTitleInfo[] = $row['title'];
+    }
 }

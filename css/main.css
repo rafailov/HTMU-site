@@ -125,6 +125,7 @@ a{
 }
 header{
     width: 80%;
+    overflow: hidden;
     margin: 0 auto;
 }
 div#background{
@@ -144,6 +145,7 @@ header nav {
     -moz-border-bottom-right-radius:18px;
     -webkit-border-bottom-right-radius:18px;
     font-family: hurtm;
+    overflow: hidden;
 
 }
 header nav ul{
@@ -167,6 +169,7 @@ header nav ul li a{
 }
 header nav ul li ul li a{
     display: block;
+    overflow: hidden;
     color:white;
 }
 a.unActive{
@@ -200,10 +203,12 @@ a.unActive:active, header nav ul li:visited, .active{
 }
 .wrapper > section > article:nth-child(2) > section > article:nth-child(2){
     display: inline-block;
+    overflow: hidden;
 }
 .wrapper > section > article:nth-child(1), .wrapper > section > article:nth-child(3){
     width: 14%;
     height: 0;
+    overflow: hidden;
 }
 #image img{
     width: 74%;
@@ -221,9 +226,11 @@ a.unActive:active, header nav ul li:visited, .active{
 }
 .miniImage img:hover{
     cursor: pointer;
+
 }
 .visual{
     border-left: 5px solid #FF9C00;
+    overflow: hidden;
 }
 #image, .miniImage{
     display: block;
@@ -238,6 +245,7 @@ div.wrapper section article section article nav ul li{
     padding-left: 30px;
     padding-right: 30px;
     border: 3px solid #FF9C00;
+    overflow: hidden;
 
 }
 
@@ -259,12 +267,15 @@ div.wrapper section article section article nav ul li:hover{
     width: 107px;
     margin-bottom: 5px;
     text-align: center;
+    overflow: hidden;
 }
 #news aside ul{
     padding-right: 5px;
+    overflow: hidden;
 }
 #news aside ul li{
     padding-bottom: 3px;
+    overflow: hidden;
 }
 #news aside ul li a:hover{
     color:#C57B06;
@@ -280,13 +291,16 @@ div.wrapper section article section article nav ul li:hover{
     display: inline-block;
     float: left;
     min-height: 223px;
+    overflow: hidden;
 }
 #newsImages span{
     color:white;
     font-size: 0.8em;
+    overflow: hidden;
 }
 .wrapper >section > article > section > article:nth-child(2){
     width: 100%;
+    overflow: hidden;
 }
 #result{
     //display: none;
@@ -296,10 +310,12 @@ div.wrapper section article section article nav ul li:hover{
     font-size: 80%;
     width: 32.5%;
     display: inline-block;
+    overflow: hidden;
 }
 
 .theNews a{
     color:#FF9C00;
+    overflow: hidden;
 }
 .theNews span{
     margin: 2px 0;
@@ -331,21 +347,35 @@ div.wrapper section article section article:nth-child(2) aside{
 }
 div.wrapper section article section article:nth-child(2) aside ul li{
     line-height: 1.9;
+    overflow: hidden;
 }
 div.wrapper section article section article:nth-child(2) aside ul li a{
     text-decoration: none;
+    overflow: hidden;
     color:rgba(33, 54, 76, 1);
+}
+div.wrapper section article section article:nth-child(2) aside ul hr{
+    margin-left: -10px;
+    width: 90%;
+}
+#listTitle{
+    list-style:none;
+    text-align:center; 
+    margin-left:-40px;
+    overflow: hidden;
+    color:#FF9C00;
 }
 #advertising{
     margin:2% 0 0 2.5%;
     width: 23%;
     overflow: hidden;
-    float: left;
+    float: right;
     min-height:300px;
 }
 .advertising{
     margin: 0 2%  2% 0;
     display: inline-block;
+    overflow: hidden;
 }
 .advertising img{
     width: 100%;
@@ -363,6 +393,7 @@ footer{
     -webkit-top-bottom-right-radius:18px;
     color: white;
     margin: 2% auto 0 auto;
+    overflow: hidden;
 
 }
 footer p{
@@ -370,6 +401,7 @@ footer p{
     margin-right: 70px;
     display: inline-block;
     float: left;
+    overflow: hidden;
 }
 footer .fb-like-box{
     margin-left: 10px;
@@ -378,6 +410,7 @@ footer .fb-like-box{
 footer span{
     font-family: hurtm;
     color:#FF9C00;
+    overflow: hidden;
 }
 
 /* ================================================================================================================================================================
@@ -431,6 +464,7 @@ footer span{
 }
 .miniNews a{
     color:#FF9C00;
+    overflow: hidden;
 }
 .miniNews span{
     margin: 2px 0;
@@ -461,6 +495,7 @@ footer span{
     text-align: center;
     background: aliceblue;
     color: rgba(255,156,0,1);
+    overflow: hidden;
 }
 #pdfHref:hover{
     background: rgba(35,68,101,1);
@@ -504,48 +539,61 @@ footer span{
 }
 #menu ul li{
     list-style: none;
+    overflow: hidden;
 }
 #menu a{
     color: white;
+    overflow: hidden;
 }
 #menu a:hover{
     color: #ffa100;
+
 }
 .colored {
     color: #c46900 !important;
 }
 .nameP span{
     color:black;
+    overflow: hidden;
 }
 .emailP a{
     color: rgba(35,68,101,1);
+    overflow: hidden;
 }
 .emailP span{
     color: black;
+    overflow: hidden;
 }
 #staff hr{
    border-top:  1px solid #8f8f8f;
+
 }
 #staff li h3, #committees ul li{
     text-decoration: underline;
+    overflow: hidden;
 }
 #staff li h3:hover , #committees ul li:hover{
     cursor: pointer;
     color: rgba(0, 0, 0, 0.53);
+    overflow: hidden;
 }
 #fxtDiv, #fmmDiv, #fxsiDiv{
     display: none;
+    overflow: hidden;
 }
 .greenColor{
+    overflow: hidden;
     color: #6C8929;
 }
 #committees ul, #staff ul{
     background: rgba(255, 255, 255, 0.52);
     padding: 2% 2% 2% 40px;
     margin-right: 12px;
+    overflow: hidden;
 }
 #kudDiv, #ksbvuDiv, #kmdDiv, #kboDiv, #ksDiv{
     display: none;
+    overflow: hidden;
 }
 .bold{
     font-family: Philosopher-Bold;
@@ -568,10 +616,12 @@ footer span{
 }
 #homesBoard address{
     color:rgba(35,68,101,1);
+    overflow: hidden;
 }
 #homesBoard span{
     font-style: italic;
     color: #c46900;
+    overflow: hidden;
 }
 
 /* ================================================================================================================================================================
@@ -618,6 +668,7 @@ Students style
     width: 100%;
     min-height: 500px;
     background:rgba(255,255,255,0.7);
+    overflow: hidden;
     
 }
 #studentDocMenu{
@@ -628,11 +679,13 @@ Students style
     background:rgba(35,68,101,0.8);
     display: inline-block;
     float: right;
+    overflow: hidden;
     text-align: left;
 }
 #studentDocMenu p{
     color: white;
     padding:0 20px;
+    overflow: hidden;
 }
 #studentDocMenu p:hover{
     cursor: pointer;
@@ -642,11 +695,16 @@ Students style
     overflow: hidden;
     display: inline;
 }
+#studentFileMenu h2{
+   color: rgba(35,68,101,1);
+}
 #planove, #stipendii, #obsht, #ects, #diplomni{
+    overflow: hidden;
     display: none;
     padding: 2%;
 }
 #normAct{
+    overflow: hidden;
     padding: 2%;
 }
 
@@ -699,6 +757,7 @@ Students style
         width: 100%;
         min-height: 163px;
     }
+
     #advertising{
         width: 100%;
     }

@@ -23,7 +23,7 @@
     			</div>
     			<div id="studentFileMenu">
                     <div id="normAct">
-                        <h2>НОРМАТИВНИ АКТОВЕ</h2
+                        <h2>НОРМАТИВНИ АКТОВЕ</h2>
                         <p><a href="https://www.dropbox.com/s/itmz6c0bnogfbbb/zkn_vo.pdf">Закон за висшето образование</a></p>
                         <p><a href="https://www.dropbox.com/s/ga1u579po58dow5/SC-UCTM.pdf">Правилник за структурата и дейността на Студентски съвет при ХТМУ - София</a></p>
                         <p><a href="https://www.dropbox.com/s/7ofx1de3p4f3z53/SO-UCTM.pdf">Правилник за вътрешния ред в студентските общежития на ХТМУ</a></p>
