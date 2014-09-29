@@ -82,6 +82,29 @@ require_once('getNews.php');
 
                                 </ul>
                             </aside>
+                            <div id="advertising" >
+                                
+                                <div class="advertising">
+                                    <a href="http://dl.uctm.edu/bg/"><img src="img/UCTM-logo.jpg" widht="155" height="150"/></a>
+                                </div>
+
+                                <div class="advertising">
+                                    <a href="http://mmu2.uctm.edu/erasmus/index.html"><img src="img/erasmus_logos.jpg" widht="155" height="150" alt/></a>
+                                </div>
+
+                                <div class="advertising">
+                                    <a href="http://www.mon.bg"><img src="img/logo-mon.jpg" widht="155" height="150" alt/></a>
+                                </div>
+
+                                <div class="advertising">
+                                    <a href="http://www.esn.org"><img src="img/logo-erasmus.jpg" widht="155" height="150" alt/></a>
+                                </div>
+
+                                <div class="advertising">
+                                    <a href="http://www.isic.bg"><img src="img/isic-logo.png" widht="155" height="150" alt/></a>
+                                </div>
+
+                            </div>
                         </article>
                     </section>
                 </article>

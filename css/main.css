@@ -336,6 +336,20 @@ div.wrapper section article section article:nth-child(2) aside ul li a{
     text-decoration: none;
     color:rgba(33, 54, 76, 1);
 }
+#advertising{
+    margin:2% 0 0 2.5%;
+    width: 23%;
+    overflow: hidden;
+    float: left;
+    min-height:300px;
+}
+.advertising{
+    margin: 0 2%  2% 0;
+    display: inline-block;
+}
+.advertising img{
+    width: 100%;
+}
 
 footer{
     width: 80%;
@@ -685,6 +699,12 @@ Students style
         width: 100%;
         min-height: 163px;
     }
+    #advertising{
+        width: 100%;
+    }
+    .advertising img{
+    width: 200px;
+}
     #menu{
        padding: 0px;
     }
