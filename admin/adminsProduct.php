@@ -11,19 +11,23 @@ if(!isset($_SESSION['user'])){
     <title><?=$title; ?></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="../js/jsProduct.js"></script>
-<link href="../css/adminsProduct.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../js/jsProduct.js"></script>
+    <link href="../css/adminsProduct.css" rel="stylesheet" type="text/css"/>
 </head>
 <body class="body">
-<img src="../img/Background.jpg" id="background">
+    <img src="../img/Background.jpg" id="background">
     <div class="menu">
         <nav><ul>
                 <li id="newsLink"><a href="javascript:void(0)" id="newsLink" title="Новини">Новини</a></li>
                 <li id="addAdminLink"><a href="javascript:void(0)" id="addAdminLink" title="Добави Администратор">Добави Администратор</a></li>
+                <li id="composition"><a href="javascript:void(0)" id="composition" title="Списъл с членове">Списък с членове</a></li>
                 <li><a href="../index.php" title="Към сайта">Към сайта</a></li>
                 <li><a href="login.php" title="Изход">Изход</a></li>
             </ul></nav>
+    </div>
+    <div id="result">
+
     </div>
     <div class="wrapper" id="mainWrapper">
         <?php
@@ -65,47 +69,25 @@ if(!isset($_SESSION['user'])){
 
             </form>
         </div>
-        <div id="result">
 
-        </div>
         <div id="allNews">
             <table class="table">
                 <tr><th>№</th><th>Заглавие</th><th>Дата</th><th>Новина</th><th>Снимка</th><th>Важност</th><th>PDF</th><th>Четена</th><th>Изтриване</th></tr>
                 <?php
-                include_once '../database/db.php';
-                $db = new DatabaseConnect;
-                $sql = "SELECT * FROM `news` where `isDeleted` = '0'";
-                $result = $db->execute($sql);
-                while ($row = $result->fetch_assoc()) {
-                    if(strlen($row["content"])> 24){
-                        $content="";
-                        $helpString = $row["content"];
-                        for($i=0;$i<24;$i++){
-                            $content.=$helpString[$i];
-                        }
-                        $content.="...";
-                    }else{
-                        $content=$row["content"];
-                    }
-
-                    if(strlen($row["title"])> 15){
-                        $titleMini="";
-                        $helpString = $row["title"];
-                        for($i=0;$i<15;$i++){
-                            $titleMini.=$helpString[$i];
-                        }
-                        $titleMini.="...";
-                    }else{
-                        $titleMini=$row["title"];
-                    }
-                    $isHavePdf = $row['isHavePdf'];
-                    if($isHavePdf == '1'){
-                        $isHavePdf = "Да";
-                    }else{
-                        $isHavePdf = "Не";
-                    }
-                    echo '<tr id="newsRow'. $row["id"].'"><td>' . $row["id"] . '</td><td>' . htmlspecialchars($titleMini) . '</td><td>' . htmlspecialchars($row["date"]) . '</td><td>' . htmlspecialchars($content) . '</td><td style="width: 8%;"><a href="../news.php?id='. $row["id"].'"><img src="../img/' . $row["picture"] . '"/></a></td><td>' . $row["isImportant"] . '</td><td>'.$isHavePdf.'</td><td>' . $row["readable"] . '</td><td class="imgRemove"><img class="imgForRemoveNews" id="news'.$row["id"].'" src="../img/removeNews.png"/></td></tr>';
-                }
+                include_once 'searchForNews.php';
+                for ($i=0; $i < $counter; $i++) { 
+                    $showedId = $i + 1;
+                      echo '<tr id="newsRow'. $news[$i]["id"].'">
+                            <td>' . $showedId . '</td>
+                            <td title="'.htmlspecialchars($news[$i]["title"]).'">' . htmlspecialchars($news[$i]["titleMini"]) . '</td>
+                            <td>' . htmlspecialchars($news[$i]["date"]) . '</td>
+                            <td title="'.htmlspecialchars($news[$i]["unwrContent"]).'">' . htmlspecialchars($news[$i]["content"]) . '</td>
+                            <td style="width: 8%;"><a href="../news.php?id='. $news[$i]["id"].'"><img src="../img/' . $news[$i]["picture"] . '"/></a></td>
+                            <td>' . $news[$i]["isImportant"] . '</td>
+                            <td>'. $news[$i]["isHavePdf"] .'</td>
+                            <td>' . $news[$i]["readable"] . '</td>
+                            <td class="imgRemove"><img class="imgForRemoveNews" id="news'.$news[$i]["id"].'" src="../img/removeNews.png"/></td></tr>';
+                }   
                 ?>
             </table>
         </div>
@@ -118,6 +100,44 @@ if(!isset($_SESSION['user'])){
             </form>
         </div>
 
+        <div class = "composition">
+            <div class="addMember">
+                <img src="../img/AddMember.png" alt="" />
+                <form method="post" action="addMember.php">
+                    <input type="text" name="firstname" required="required" placeholder="Име"/>
+                    <input type="text" name="lastname" required="required" placeholder="Фамилия"/>
+                    <input type="email" name="email" required="required" placeholder="Емайл"/>
+                    <input type="text" name="specialty" required="required" placeholder="Специалност"/>
+                    <select name="faculty">
+                        <option value="1">ФАКУЛТЕТ ПО ХИМИЧНИ ТЕХНОЛОГИИ</option>
+                        <option value="2">ФАКУЛТЕТ ПО ХИМИЧНО И СИСТЕМНО ИНЖЕНЕРСТВО</option>
+                        <option value="3">ФАКУЛТЕТ ПО МЕТАЛУРГИЯ И МАТЕРИАЛОЗНАНИЕ</option>
+                    </select>  
+                    <input type="submit" value="Добави"/>
+                </form>
+            </div>
+            <div class = "members">
+                <table>
+                    <tbody>
+                    <tr><th>№</th><th>Име</th><th>Фамилия</th><th>Емайл</th><th>Специалност</th><th>Факултет</th><th>Изтриване</th></tr>
+                    <?php
+                        include_once 'searchForComposition.php';
+                        for ($i=0; $i < $counter; $i++) { 
+                            $showedId = $i + 1;
+                          echo '<tr id="compositionRow' . $composition[$i]["id"] .'">
+                                <td>' . $showedId. '</td>
+                                <td>' . $composition[$i]["fname"] .'</td>
+                                <td>' . $composition[$i]["lname"] . '</td>
+                                <td>' . $composition[$i]["email"] . '</td>
+                                <td title="'.$composition[$i]["specialty"].'">' . $composition[$i]["specialtyWrapped"]  . '</td>
+                                <td>' . $composition[$i]["faculty"]  . '</td>
+                                <td class="imgRemove"><img class="imgForRemoveComposition" id="composition'.$composition[$i]["id"].'" src="../img/removeMember.png"/></td></tr>';
+                        }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </body>
 </html>

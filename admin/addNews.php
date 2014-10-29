@@ -25,7 +25,7 @@ if ($_POST) {
                         if (file_exists("../img/" . $_FILES["file"]["name"])) {
                             $error = $_FILES["file"]["name"] . " вече съществува. ";
                         } else {
-                            if(!empty($_FILES['file2']) && isset($_FILES['file2'])){
+                            if(!empty($_FILES['file2']['name']) && isset($_FILES['file2']['name'])){
                                 $allowedExt = array("pdf");
                                 $temp = explode(".", $_FILES["file2"]["name"]);
                                 $extension = end($temp);
@@ -69,17 +69,22 @@ if ($_POST) {
                                     $filepath = $_FILES["file"]["name"];
                                     if(isset($tmpPDF)){
                                         $sql="INSERT INTO `studsavet`.`news` (`title`, `date`, `content`, `picture`, `isImportant`,`isHavePdf`, `pdfPath`, `hrefText`, `readable`) VALUES ('" . $db->escape($title) . "', '" . $db->escape($date) . "', '" . $db->escape($content) . "', '" . $filepath . "', '".$digTypeNews."', '1', '" . $db->escape($pathPDF) . "', '" . $db->escape($pdfHref) . "',  '0');";
-                                        move_uploaded_file($tmpPDF, $pathPDF);
+                                        
                                     }else{
                                         $sql="INSERT INTO `studsavet`.`news` (`title`, `date`, `content`, `picture`, `isImportant`, `readable`) VALUES ('" . $db->escape($title) . "', '" . $db->escape($date) . "', '" . $db->escape($content) . "', '" . $filepath . "', '".$digTypeNews."', '0');";
 
                                     }
 
                                     $query = $db->execute($sql);
-                                    move_uploaded_file($_FILES["file"]["tmp_name"], "../img/" . $_FILES["file"]["name"]);
-
-                                    $message = "Новината е качена успешно !";
-                                   // echo $message;
+                                    if (is_array($query) && $query[0] == 'error') {
+                                            $error .= $query[1];
+                                    }else{
+                                        if(isset($tmpPDF)){
+                                            move_uploaded_file($tmpPDF, $pathPDF);
+                                        }
+                                        move_uploaded_file($_FILES["file"]["tmp_name"], "../img/" . $_FILES["file"]["name"]);
+                                        $message = "Новината е качена успешно !";
+                                    }
                                 }
                             }
                         }
@@ -96,13 +101,7 @@ if ($_POST) {
     }
 }
 
-if (isset($message)) {
-    //echo $message;
-    include_once 'adminsProduct.php';
-} else if (isset($error)) {
-    //echo $error;
-    include_once 'adminsProduct.php';
-}else{
-    $error = ' Качването на новината не беше осъществено !';
-    include_once 'adminsProduct.php';
+if (!isset($message) && !isset($error)) {
+    $error = ' Качването на новината не беше осъществено !'; 
 }
+  include_once 'adminsProduct.php';

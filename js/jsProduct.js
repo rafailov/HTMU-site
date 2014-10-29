@@ -1,20 +1,21 @@
 
 $(document).ready(function(){
     $('#newsLink').click(function(){
-        $('.addAdmin').slideUp(100);
-        $('.groupeAndDocs').slideUp(100);
-        $('#allNews').slideDown("fast");
+        $('.addAdmin').slideUp(10);
+        $('.composition').slideUp(10);
+        $('#allNews').slideDown("slow");
+
                 
     });
     $('#addAdminLink').click(function(){
-        $('#allNews').slideUp(100);
-        $('.groupeAndDocs').slideUp(100);
-        $('.addAdmin').slideDown("fast");
+        $('#allNews').slideUp(10);
+         $('.composition').slideUp(10);
+        $('.addAdmin').slideDown("slow");
     });
-    $('#addGroupPDF').click(function(){
-        $('#allNews').slideUp(100);
-        $('.addAdmin').slideUp(100);
-        $('.groupeAndDocs').slideDown("fast");
+    $('#composition').click(function(){
+        $('#allNews').slideUp(10);
+        $('.addAdmin').slideUp(10);
+        $('.composition').slideDown("fast");
     });
 
     $('#removeMessage').click(function(){
@@ -58,7 +59,28 @@ $(document).ready(function(){
             alert("Новината не беше премахната успешно !");
         })
 
-    })
+    });
+
+    $('.imgForRemoveComposition').click(function(){
+        var id = $(this).attr('id');
+        id = id.substr(11);
+
+        $.ajax({
+            url: "../admin/deleteComposition.php",
+            type: "POST",
+            dataType: "html",
+            data: {
+                value: id
+            }
+        }).done(function(data) {
+            $("#result").html(data);
+            $('#compositionRow'+id).hide(90);
+            //alert(id);
+        }).fail(function() {
+            alert("Записът не беше премахната успешно !");
+        })
+
+    });
 
 
 });

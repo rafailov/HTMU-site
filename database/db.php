@@ -5,7 +5,7 @@ class DatabaseConnect {
 
     public function __construct() {
 
-        $db = new mysqli('localhost', 'root', '', 'studsavet');
+        $db = new mysqli("localhost", "root", "", "studsavet");
         if ($db->connect_errno) {
             header('Location: errorPages' . DS . 'database.php');
             exit;
@@ -19,7 +19,7 @@ class DatabaseConnect {
         $this->_db->query('SET NAMES utf8');
         $query = $this->_db->query($sql);
         if (!$query) {
-            echo $this->_db->error;
+            return array('error', $this->_db->error);
         } else {
             return $query;
         }

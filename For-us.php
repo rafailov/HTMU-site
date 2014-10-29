@@ -23,7 +23,7 @@ require_once('header.html');
 
                             <p>Студентски съвет подпомага студенти в неравностойно положение, като отпуска еднократни помощи;</p>
                             <p>участва в организирането, приемането и класирането на документите за стипендии, отпускани както от ХТМУ, така и по проект „Студентски стипендии и награди”  по оперативна програма „Развитие на човешките ресурси” ; участва активно в научната, спортната и масовата дейност на университета; участва в управлението на студентските общежития; популяризира и утвърждава авторитета на ХТМУ; осъществява контакт с работодатели.</p>
-
+                            
                             <p>Студентски съвет е законово-регламентирана форма на връзка между студентите и ръководните органи на Университета на всичките му нива,  в това число Факултетните съвети, Академичният и Ректорският съвет на ХТМУ и други висши училища.</p>
                         </div>
                         <div id="structure">
@@ -36,103 +36,49 @@ require_once('header.html');
                                 <li><h3 id="fmm">ФАКУЛТЕТ ПО МЕТАЛУРГИЯ И МАТЕРИАЛОЗНАНИЕ</h3></li>
                             </ul>
                             <div id="fxtDiv">
-                                <hr>
-                                <p class="nameP colored"><span>Ангелина Петрова,</span> Фин органичен синтез.</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:angelina503@abv.bg" >angelina503@abv.bg</a></p>
-                                <hr>
-
-                                <hr>
-                                <p class="nameP colored"><span>Людмила Драгомирова,</span> Електрохимични технологии,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:lusinda_@abv.bg" >lusinda_@abv.bg</a></p>
-                                <hr>
-
-                                <hr>
-                                <p class="nameP colored"><span>Милен Заков, </span> Фин органичен синтез,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:zakovssuctm@gmail.com" >zakovssuctm@gmail.com</a></p>
-                                <hr>
-
-
-                                <hr>
-                                <p class="nameP colored"><span>Мирослав Жеков, </span> Фин органичен синтез,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:miro_jekov@abv.bg" >miro_jekov@abv.bg</a></p>
-                                <hr>
-
-                                <hr>
-                                <p class="nameP colored"><span>Николай Яворов, </span> Биогорива,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:nyavorof@gmail.com" >nyavorof@gmail.com</a></p>
-                                <hr>
-
-                                <hr>
-                                <p class="nameP colored"><span>Таня Петрова, </span> Докторант/НЕП,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:visit@uctm.edu" >visit@uctm.edu</a></p>
-                                <hr>
+                                <?php
+                                include_once ('admin/searchForComposition.php');
+                                for ($i=0; $i < $counter; $i++) { 
+                                    if ($composition[$i]["faculty"] == "ФХТ") {
+                                        ?>
+                                        <hr>
+                                        <p class="nameP colored"><span><?php echo $composition[$i]["fname"] ." " . $composition[$i]["lname"];?>,</span> <?php echo $composition[$i]["specialty"];?>.</p>
+                                        <p class="emailP"><span>e-mail:</span><a href="mailto:<?php echo $composition[$i]["email"];?>" ><?php echo $composition[$i]["email"];?></a></p>
+                                        <hr>
+                                        <?php
+                                    }
+                                }
+                                ?>
                             </div >
                             <div id="fxsiDiv">
-                                <hr>
-                                <p class="nameP colored"><span>Дайана Лозанова, </span> Индустриална химия на френски език,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:daeto@abv.bg" >daeto@abv.bg</a></p>
-                                <hr>
-
-                                <hr>
-                                <p class="nameP colored"><span>Деян Хаустов, </span> Индустриална химия на френски език,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:deyan_haustov@yahoo.com" >deyan_haustov@yahoo.com</a></p>
-                                <hr>
-
-                                <hr>
-                                <p class="nameP colored"><span>Катерина Петракиева, </span> Биотехнологии,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:katu6i@abv.bg" >katu6i@abv.bg</a></p>
-                                <hr>
-
-                                <hr>
-                                <p class="nameP colored"><span>Константин Македонски, </span> Индустриален мениджмънт,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:kostamak91@gmail.com" >kostamak91@gmail.com</a></p>
-                                <hr>
-
-                                <hr>
-                                <p class="nameP colored"><span>Моника Грозданова, </span> Индустриален мениджмънт,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:monika.grozdanova@abv.bg" >monika.grozdanova@abv.bg</a></p>
-                                <hr>
-
-                                <hr>
-                                <p class="nameP colored"><span>Натали Ардалиева, </span> Индустриален мениджмънт,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:natali_ardalieva91@abv.bg" >natali_ardalieva91@abv.bg</a></p>
-                                <hr>
-
-                                <hr>
-                                <p class="nameP colored"><span>София Кирякова, </span> Индустриална химия на френски,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:sophia_kiryakova@abv.bg" >sophia_kiryakova@abv.bg</a></p>
-                                <hr>
-
-                                <hr>
-                                <p class="nameP colored"><span>Станислав Славов, </span> Докторант/Физика,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto: stanislavslavov@mail.bg" > stanislavslavov@mail.bg</a></p>
-                                <hr>
-
-                                <hr>
-                                <p class="nameP colored"><span>Христо Дюлгеров, </span> Индустриална химия на френски,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:h.dyulgerov@abv.bg" >h.dyulgerov@abv.bg</a></p>
-                                <hr>
+                                                                <?php
+                                include_once ('admin/searchForComposition.php');
+                                for ($i=0; $i < $counter; $i++) { 
+                                    if ($composition[$i]["faculty"] == "ФХСИ") {
+                                        ?>
+                                        <hr>
+                                        <p class="nameP colored"><span><?php echo $composition[$i]["fname"] ." " . $composition[$i]["lname"];?>,</span> <?php echo $composition[$i]["specialty"];?>.</p>
+                                        <p class="emailP"><span>e-mail:</span><a href="mailto:<?php echo $composition[$i]["email"];?>" ><?php echo $composition[$i]["email"];?></a></p>
+                                        <hr>
+                                        <?php
+                                    }
+                                }
+                                ?>
                             </div>
                             <div id="fmmDiv">
-                                <hr>
-                                <p class="nameP colored"><span>Вержиния Александрова, </span> Силикатни материали,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:aleksandrovassuctm@gmail.com" >aleksandrovassuctm@gmail.com</a></p>
-                                <hr>
-                                <hr>
-                                <p class="nameP colored"><span>Зорница Тодорова, </span> докторант</p>
-                                <hr>
-                                <hr>
-                                <p class="nameP colored"><span>Мирослав Младенов, </span> Металургия,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:miro_v.mladenov@abv.bg" >miro_v.mladenov@abv.bg</a></p>
-                                <hr>
-                                <hr>
-                                <p class="nameP colored"><span>Николай Копаранов, </span> Полимерни материали,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:niki_koparanov@abv.bg" >niki_koparanov@abv.bg</a></p>
-                                <hr>
-                                <hr>
-                                <p class="nameP colored"><span>Силвия Христова, </span> Металургия,</p>
-                                <p class="emailP"><span>e-mail:</span><a href="mailto:silvia_hristova_89@abv.bg" >silvia_hristova_89@abv.bg</a></p>
-                                <hr>
+                                <?php
+                                include_once ('admin/searchForComposition.php');
+                                for ($i=0; $i < $counter; $i++) { 
+                                    if ($composition[$i]["faculty"] == "ФММ") {
+                                        ?>
+                                        <hr>
+                                        <p class="nameP colored"><span><?php echo $composition[$i]["fname"] ." " . $composition[$i]["lname"];?>,</span> <?php echo $composition[$i]["specialty"];?>.</p>
+                                        <p class="emailP"><span>e-mail:</span><a href="mailto:<?php echo $composition[$i]["email"];?>" ><?php echo $composition[$i]["email"];?></a></p>
+                                        <hr>
+                                        <?php
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                         <div id="committees">

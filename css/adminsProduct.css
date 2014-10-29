@@ -90,7 +90,7 @@ a{
 
 }
 .menu nav a{
-    padding: 10px 62px;
+    padding: 10px 40px;
 }
 .menu nav a:link,.menu nav a:visited{
     color: #FFF;
@@ -148,9 +148,10 @@ a{
 }
 .addNews textarea{
     height: 88px;
+    max-width: 91%;
 }
 
-.addNews  input[type="submit"]{
+input[type="submit"]{
     display: block;
     margin: 0 0 5px 20px;
     width: 52%;
@@ -160,7 +161,7 @@ a{
     color: white;
     border: none;
 }
-.addNews  input[type="submit"]:hover{
+ input[type="submit"]:hover{
     cursor: pointer;
 }
 .addNews input[type="checkbox"]{
@@ -190,12 +191,12 @@ a{
     border: 1px midnightblue solid;
     border-radius: 15px;
 }
-#allNews td{
+td,th{
 
     text-align: center;
    
 }
-#allNews tr{
+tr{
     border-bottom: 1px midnightblue solid;
     border-top: 1px midnightblue solid;
 }
@@ -213,33 +214,53 @@ a{
     cursor: pointer;
     opacity: 1;
 }
-/*
-#category{
-    width: 30%;
-    height: 150px;
-    padding-top: 20px;
-    border: 1px;
-    border-color: midnightblue;
-    border-style: solid;
-    border-radius: 15px;
-    padding-top: 1%;
-    float: left;
-    margin-left: 10%;
+/*------------------ADD MEMBERS------------------------------*/
+.composition {
+    position: relative;
+    left: 36%;
+    width: 60%;
     display: none;
+    margin-left: 2%;
+    min-height: 200px;
+    font-size: 0.9em;
 }
-#category input{
+.composition table{
+    border: 1px midnightblue solid;
+    border-radius: 15px;
+    margin:3% 2%;
+    width: 90%;
+}
+.addMember{
+    width: 75%;
+    margin-left: 2%;
+    border: 1px midnightblue solid;
+    border-radius: 15px;
+}
+.addMember input, .addMember select{
+    width: 80%;
+    height: 35px;
+    margin: 5px 0;
+    padding-left: 5px;
     border-radius: 5px;
 }
-.button{
-    padding:4px 20px 4px 20px;
+.addMember input[type="submit"],.addMember select{
+    width: 82%
 }
-*/
+.addMember form{
+    width: 64%;
+    margin: 2% 0 2% 161px;
+}
+.addMember img{
+    position: absolute;
+    margin: 5% 2% 0 2%; 
+}
 @media all and (max-width: 1470px){
 
 }
 @media all and (max-width: 1319px){
     .menu nav{
     width: 100%;
+    padding-left: 10%;
     }
     .menu nav ul{
         width: 100%;
@@ -277,16 +298,18 @@ a{
         left: 45%;
     }
     .menu nav a{
-        padding: 10px 58px;
+        padding: 10px 45px;
     }
 
 }
 @media all and (max-width: 1170px){
-
+    .menu nav{
+    padding-left: 0;
+    }
 }
 @media all and (max-width: 1060px){
     .menu nav a{
-        padding: 10px 48px;
+        padding: 10px 38px;
     }
 
 }
@@ -312,7 +335,7 @@ a{
         left: 0;
     }
     .menu nav a{
-        padding: 10px 40px;
+        padding: 10px 30px;
     }
 
 }
@@ -323,7 +346,7 @@ a{
         padding: 0;
     }
     .menu nav{
-        height: 200px;
+        height: 250px;
         padding: 0;
 
     }

@@ -49,6 +49,7 @@ if(isset($_GET['id'])){
             if(isset($imageNameSimple) && isset($newsIdSimple) && isset($newsDateSimple) && isset($newsTitleSimple)){
                 $size = sizeof($imageNameSimple);
                 for($id = $size-1;$id>=0;$id--){
+                    if ($newsId != $newsIdSimple[$id]){
                     ?>
                     <div class="miniNews">
                         <a href="?id=<?php echo$newsIdSimple[$id];?>">
@@ -58,6 +59,7 @@ if(isset($_GET['id'])){
                         </a>
                     </div>
                     <?php
+                    }
                 }
             }
             ?>

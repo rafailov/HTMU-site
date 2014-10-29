@@ -875,6 +875,7 @@ Students style
 @media all and (max-width: 650px){
     header nav ul li, header nav ul li a{
         display: block;
+        max-width: 651px;
     }
     header nav ul{
         margin: 0;
