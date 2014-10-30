@@ -337,6 +337,21 @@ tr{
     .menu nav a{
         padding: 10px 30px;
     }
+    .composition {
+        position: relative;
+        left: 0;
+        width: 100%;
+        margin-left: 1%;
+        margin-top: 3%;
+        display:inline;
+    }
+    .composition table{
+        margin-left: 0;
+    }
+    .addMember{
+        margin-left: 0;
+        width: 97%;
+    }
 
 }
 

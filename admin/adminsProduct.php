@@ -21,7 +21,7 @@ if(!isset($_SESSION['user'])){
         <nav><ul>
                 <li id="newsLink"><a href="javascript:void(0)" id="newsLink" title="Новини">Новини</a></li>
                 <li id="addAdminLink"><a href="javascript:void(0)" id="addAdminLink" title="Добави Администратор">Добави Администратор</a></li>
-                <li id="composition"><a href="javascript:void(0)" id="composition" title="Списъл с членове">Списък с членове</a></li>
+                <li id="composition"><a href="javascript:void(0)" id="composition" title="Списъл с членове">Списък на състава</a></li>
                 <li><a href="../index.php" title="Към сайта">Към сайта</a></li>
                 <li><a href="login.php" title="Изход">Изход</a></li>
             </ul></nav>

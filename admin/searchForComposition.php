@@ -1,5 +1,5 @@
 <?php
-$path = substr($_SERVER['PHP_SELF'],0,12); //--->/HTMU-site/trunk/ OR /nstudsavet/
+$path = substr($_SERVER['PHP_SELF'],0,17); //--->/HTMU-site/trunk/ OR /nstudsavet/
 include_once $_SERVER["DOCUMENT_ROOT"] . $path . 'database/db.php';
 include_once $_SERVER["DOCUMENT_ROOT"] . $path . 'admin/functions.php';
 $db = new DatabaseConnect;
