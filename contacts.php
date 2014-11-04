@@ -67,7 +67,7 @@ require_once('header.html');
                     Вторник: 13:00 - 14:00 ч.<br/>
                     Четвъртък: 13:00 - 14:00 ч.
 
-                    <p><span>Ангелина Петрова</span> / Секретар на Студентски съвет при ХТМУ/</p>
+                    <p><span>Полина Петрова</span> / Секретар на Студентски съвет при ХТМУ/</p>
                     Понеделник: 14:00 - 15:00 ч.<br/>
                     Сряда: 13:00 - 14:00 ч.<br/><br/>
                      <h1>Контакти</h1>
@@ -77,7 +77,7 @@ require_once('header.html');
 
 
                     <address>тел: (+359 2) 8163 146</address>
-                    <span>e-mail:</span> <a href="mailto:student_council@uctm.edu">student_council@uctm.edu</a>,  <a href="mailto:ss_htmu@abv.bg">ss_htmu@abv.bg</a>
+                    <span>e-mail:</span> <a href="mailto:student_council@my.uctm.edu">student_council@my.uctm.edu</a>,  <a href="mailto:ssuctm@gmail.com">ssuctm@gmail.com</a>
 
                 </div>
             </section>

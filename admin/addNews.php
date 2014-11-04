@@ -68,10 +68,10 @@ if ($_POST) {
                                     $db = new DatabaseConnect;
                                     $filepath = $_FILES["file"]["name"];
                                     if(isset($tmpPDF)){
-                                        $sql="INSERT INTO `studsavet`.`news` (`title`, `date`, `content`, `picture`, `isImportant`,`isHavePdf`, `pdfPath`, `hrefText`, `readable`) VALUES ('" . $db->escape($title) . "', '" . $db->escape($date) . "', '" . $db->escape($content) . "', '" . $filepath . "', '".$digTypeNews."', '1', '" . $db->escape($pathPDF) . "', '" . $db->escape($pdfHref) . "',  '0');";
+                                        $sql="INSERT INTO `news` (`title`, `date`, `content`, `picture`, `isImportant`,`isHavePdf`, `pdfPath`, `hrefText`, `readable`) VALUES ('" . $db->escape($title) . "', '" . $db->escape($title) . "', '" . $db->escape($date) . "', '" . $db->escape($content) . "', '" . $filepath . "', '".$digTypeNews."', '1', '" . $db->escape($pathPDF) . "', '" . $db->escape($pdfHref) . "',  '0');";
                                         
                                     }else{
-                                        $sql="INSERT INTO `studsavet`.`news` (`title`, `date`, `content`, `picture`, `isImportant`, `readable`) VALUES ('" . $db->escape($title) . "', '" . $db->escape($date) . "', '" . $db->escape($content) . "', '" . $filepath . "', '".$digTypeNews."', '0');";
+                                        $sql="INSERT INTO `news` (`title`, `date`, `content`, `picture`, `isImportant`, `readable`) VALUES ('" . $db->escape($title) . "', '" . $db->escape($date) . "', '" . $db->escape($content) . "', '" . $filepath . "', '".$digTypeNews."', '0');";
 
                                     }
 
@@ -80,7 +80,7 @@ if ($_POST) {
                                             $error .= $query[1];
                                     }else{
                                         if(isset($tmpPDF)){
-                                            move_uploaded_file($tmpPDF, $pathPDF);
+                                            move_uploaded_file($tmpPDF, "../docs/".$pathPDF);
                                         }
                                         move_uploaded_file($_FILES["file"]["tmp_name"], "../img/" . $_FILES["file"]["name"]);
                                         $message = "Новината е качена успешно !";

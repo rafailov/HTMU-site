@@ -77,6 +77,12 @@ if(!isset($_SESSION['user'])){
                 include_once 'searchForNews.php';
                 for ($i=0; $i < $counter; $i++) { 
                     $showedId = $i + 1;
+                    if (strlen($news[$i]["titleMini"]) <= 5 ) {
+                        $news[$i]["titleMini"] = $news[$i]["title"];
+                    }
+                    if (strlen($news[$i]["content"]) <= 5) {
+                        $news[$i]["content"] = $news[$i]["unwrContent"];
+                    }
                       echo '<tr id="newsRow'. $news[$i]["id"].'">
                             <td>' . $showedId . '</td>
                             <td title="'.htmlspecialchars($news[$i]["title"]).'">' . htmlspecialchars($news[$i]["titleMini"]) . '</td>

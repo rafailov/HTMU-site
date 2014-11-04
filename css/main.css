@@ -32,7 +32,7 @@ textarea {
 }
 
 html {
-    font-size: 1em;
+    font-size: 0.9em;
     line-height: 1.4;
 }
 
@@ -136,8 +136,8 @@ div#background img{
     width: 100%;
 }
 header nav {
-    background: rgba(93,93,93,0.8);
-    padding: 1px;
+    background: rgba(35,68,101,0.8);
+    /*padding: 1px;*/
     border-bottom-left-radius:18px;
     -moz-border-bottom-left-radius:18px;
     -webkit-border-bottom-left-radius:18px;
@@ -150,7 +150,7 @@ header nav {
 }
 header nav ul{
     width: 50%;
-    margin: 17px auto 16px auto;
+    margin: 16px auto 16px auto;
 
 }
 header nav ul li{
@@ -214,6 +214,7 @@ a.unActive:active, header nav ul li:visited, .active{
     width: 74%;
     float:left;
     max-height: 460px;
+	min-height: 260px;
 }
 .miniImage img{
     display: block;
@@ -493,7 +494,7 @@ footer span{
     margin-top: 20px;
     display: block;
     text-align: center;
-    background: aliceblue;
+    background: white;
     color: rgba(255,156,0,1);
     overflow: hidden;
 }
@@ -506,7 +507,7 @@ footer span{
 
    */
 #forusSection{
-    background: url(../img/HTMU-background.jpg) no-repeat;
+    background: url(../img/background_forus.jpg) no-repeat;
     background-size: 100%;
     min-height: 700px;
     font-family: Philosopher-Regular;
@@ -663,13 +664,25 @@ footer span{
 /*============================================================================================================================
 Students style
 */
-
+#parentsectionforstudent{
+    background: url(../img/background_forus.jpg) repeat;
+    background-size: 100%;
+    min-height: 700px;
+    padding-top: 20px;
+}
 #studentSection{
-    width: 100%;
+	padding-left:2%;
+    width: 98%;
     min-height: 500px;
     background:rgba(255,255,255,0.7);
     overflow: hidden;
     
+}
+#studentSection a{
+    color:steelblue;
+}
+#studentSection a:hover{
+    text-decoration: underline;
 }
 #studentDocMenu{
    /* position: absolute;*/
@@ -698,16 +711,16 @@ Students style
 #studentFileMenu h2{
    color: rgba(35,68,101,1);
 }
-#planove, #stipendii, #obsht, #ects, #diplomni{
+#normAct, #planove, #stipendii, #obsht, #ects, #diplomni{
     overflow: hidden;
+    padding: 2%;
+}
+.visible{
+    display: inline;
+}
+.unVisible{
     display: none;
-    padding: 2%;
 }
-#normAct{
-    overflow: hidden;
-    padding: 2%;
-}
-
 /* ================================================================================================================================================================
   Responsive
 

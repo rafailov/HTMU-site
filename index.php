@@ -58,7 +58,7 @@ require_once('getNews.php');
                                     <div class="theNews">
                                         <a href="news.php?id=<?php echo$newsIdSimple[$ID];?>">
                                             <div class="title"><h3><?php echo$newsTitleSimple[$ID];?><h3></div>
-                                            <span><?php echo$newsDateSimple[$ID];?></span>
+                                            <span>Качена на : <?php echo$newsDateSimple[$ID];?></span>
                                             <img  src="img/<?php echo$imageNameSimple[$ID];?>"/>
                                         </a>
                                     </div>
@@ -97,15 +97,15 @@ require_once('getNews.php');
                                 </div>
 
                                 <div class="advertising">
-                                    <a href="http://www.mon.bg"><img src="img/logo-mon.png" widht="155" height="150" alt/></a>
+                                    <a href="http://www.mon.bg"><img src="img/logo-mon.png" widht="155" height="80" alt/></a>
                                 </div>
 
                                 <div class="advertising">
-                                    <a href="http://www.esn.org"><img src="img/logo-erasmus.png" widht="155" height="150" alt/></a>
+                                    <a href="http://www.esn.org"><img src="img/logo-erasmus.png" widht="155" height="110" alt/></a>
                                 </div>
 
                                 <div class="advertising">
-                                    <a href="http://www.isic.bg"><img src="img/isic-logo.png" widht="155" height="150" alt/></a>
+                                    <a href="http://www.isic.bg"><img src="img/isic-logo.png" widht="155" height="130" alt/></a>
                                 </div>
 
                             </div>

@@ -34,7 +34,7 @@ if ($_POST) {
         ];
         $hashPass = password_hash($pass, PASSWORD_BCRYPT, $options);
 
-        $sql = "INSERT INTO `studsavet`.`users` (`user`, `password`) VALUES ('". $db->escape($user)."', '".$hashPass."');";//need to add $hashPass
+        $sql = "INSERT INTO `users` (`user`, `password`) VALUES ('". $db->escape($user)."', '".$hashPass."');";
         $db->execute($sql);
         $userIsAdd = true;
     }

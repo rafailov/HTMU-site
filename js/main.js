@@ -67,57 +67,99 @@ $(document).ready(function(){
         $("#studentDocMenu p").removeClass( "colored" );
         $(this).addClass( "colored" );
     });
-
+//----------------------
+ 
     $(".norm").click(function(){
+		console.log("NORMATIVNI AKTOVE");
+        $("#studentFileMenu div").removeClass("visible");
+        $("#studentFileMenu div").addClass("unVisible");
+        $("#normAct").addClass("visible");
+        $("#normAct").removeClass("unVisible");
+    });
+    /*$(".norm").click(function(){
         $("#normAct").show(200);
         $("#planove").hide(500);
         $("#stipendii").hide(500);
         $("#obsht").hide(500);
         $("#ects").hide(500);
         $("#diplomni").hide(500);
-    });
+    });*/
     $(".uchPlan").click(function(){
+		console.log("UchebniPlanove");
+        $("#studentFileMenu div").removeClass("visible");
+        $("#studentFileMenu div").addClass("unVisible");
+        $("#planove").addClass("visible");
+        $("#planove").removeClass("unVisible");
+    });
+    /*$(".uchPlan").click(function(){
         $("#normAct").hide(500);
         $("#planove").show(200);
         $("#stipendii").hide(500);
         $("#obsht").hide(500);
         $("#ects").hide(500);
         $("#diplomni").hide(500);
-    });
+    });*/
     $(".stipen").click(function(){
+		console.log("Stipendii");
+        $("#studentFileMenu div").removeClass("visible");
+        $("#studentFileMenu div").addClass("unVisible");
+        $("#stipendii").addClass("visible");
+        $("#stipendii").removeClass("unVisible");
+    });
+    /*$(".stipen").click(function(){
         $("#normAct").hide(500);
         $("#planove").hide(500);
         $("#stipendii").show(200);
         $("#obsht").hide(500);
         $("#ects").hide(500);
         $("#diplomni").hide(500);
-    });
+    });*/
     $(".obshtak").click(function(){
+		console.log("Obshtak");
+        $("#studentFileMenu div").removeClass("visible");
+        $("#studentFileMenu div").addClass("unVisible");
+        $("#obsht").addClass("visible");
+        $("#obsht").removeClass("unVisible");
+    });
+    /*$(".obshtak").click(function(){
         $("#normAct").hide(500);
         $("#planove").hide(500);
         $("#stipendii").hide(500);
         $("#obsht").show(200);
         $("#ects").hide(500);
         $("#diplomni").hide(500);
-    });
+    });*/
     $(".ects").click(function(){
+		console.log("ETCS");
+        $("#studentFileMenu div").removeClass("visible");
+        $("#studentFileMenu div").addClass("unVisible");
+        $("#ects").addClass("visible");
+        $("#ects").removeClass("unVisible");
+    });
+    /*$(".ects").click(function(){
         $("#normAct").hide(500);
         $("#planove").hide(500);
         $("#stipendii").hide(500);
         $("#obsht").hide(500);
         $("#ects").show(200);
         $("#diplomni").hide(500);
-    });
+    });*/
     $(".diplomna").click(function(){
+		console.log("DIPLOMNA");
+        $("#studentFileMenu div").removeClass("visible");
+        $("#studentFileMenu div").addClass("unVisible");
+        $("#diplomni").addClass("visible");
+        $("#diplomni").removeClass("unVisible");
+    });
+    /*$(".diplomna").click(function(){
         $("#normAct").hide(500);
         $("#planove").hide(500);
         $("#stipendii").hide(500);
         $("#obsht").hide(500);
         $("#ects").hide(500);
         $("#diplomni").show(200);
-    });
-
-
+    });*/
+//--------------
 
     $("#fxt").click(function(){
         $("#fxsiDiv").slideUp(200);

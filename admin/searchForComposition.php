@@ -3,8 +3,7 @@ $path = substr($_SERVER['PHP_SELF'],0,17); //--->/HTMU-site/trunk/ OR /nstudsave
 include_once $_SERVER["DOCUMENT_ROOT"] . $path . 'database/db.php';
 include_once $_SERVER["DOCUMENT_ROOT"] . $path . 'admin/functions.php';
 $db = new DatabaseConnect;
-$sql =  "SELECT composition.id, composition.fname , composition.lname , composition.email , composition.specialty , composition.faculty_id "
-        ."FROM composition LEFT JOIN faculty ON faculty_id = faculty.id ORDER BY faculty.id";
+$sql =  "SELECT composition.id, composition.fname, composition.lname, composition.email, composition.specialty, composition.faculty_id FROM composition LEFT JOIN faculty ON faculty_id = faculty.id ORDER BY composition.faculty_id";
 
 $result = $db->execute($sql);
 $counter = 0;
