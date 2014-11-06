@@ -507,7 +507,7 @@ footer span{
 
    */
 #forusSection{
-    background: url(../img/background_forus.jpg) no-repeat;
+    background: url(../img/background_forus.jpg) repeat;
     background-size: 100%;
     min-height: 700px;
     font-family: Philosopher-Regular;
@@ -520,12 +520,28 @@ footer span{
     width: 70%;
     float: left;
     font-weight: bold;
-    background-color: rgba(216, 216, 216, 0.73);
+    background-color: rgba(216, 216, 216, 0.85);
     padding: 10px;
     overflow: hidden;
+    font-size: 1.05em;
 }
+
 #content h1{
 
+    color: #e78400;
+}
+#structure h2{
+    color: rgb(43, 70, 111);
+}
+#structure h3{
+    color: rgb(51, 92, 139);
+}
+#structure hr{
+    width: 97%;
+    border-top:  1px solid rgba(220, 126, 0, 0.61);
+
+}
+#structure h3 span{
     color: #e78400;
 }
 #menu{
@@ -720,6 +736,15 @@ Students style
 }
 .unVisible{
     display: none;
+}
+#ects span{
+    color: rgb(174, 98, 0);
+}
+#ects li{
+    color: rgb(54, 101, 153);
+}
+#obsht span{
+    color: rgb(174, 98, 0);
 }
 /* ================================================================================================================================================================
   Responsive
